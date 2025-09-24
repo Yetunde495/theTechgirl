@@ -18,7 +18,7 @@ const inter = Inter({
 
 
 export const metadata: Metadata = {
-  title: 'Alex Chen - Frontend Developer',
+  title: 'Yetunde Morenikeji - Frontend Developer',
   description: 'Frontend Developer specializing in seamless user experiences and high-performance web applications',
 };
 

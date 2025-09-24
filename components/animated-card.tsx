@@ -8,6 +8,7 @@ import {
   MessageCircle,
   MessageSquareCode,
   MousePointerClickIcon,
+  Star,
   User,
   Waves,
 } from "lucide-react";
@@ -290,33 +291,83 @@ export function AnimatedProfile() {
     </DynamicContainer>
   );
   const renderMediumState = () => (
-    <DynamicContainer className="flex flex-col justify-between px-2 pt-4 text-left text-white h-full">
-      <DynamicTitle className="text-2xl pl-3 font-black tracking-tighter">
-        Reincarnation, welcome back
-      </DynamicTitle>
-      <DynamicDescription className="leading-5 text-neutral-500 pl-3">
-        Good for small tasks or call outs
-      </DynamicDescription>
-      <DynamicDiv className="flex flex-col mt-auto space-y-1 mb-2 bg-neutral-700 p-2 rounded-b-2xl">
-        <button>
-          <Mail className="mr-2 h-4 w-4 fill-cyan-400 text-neutral-900" /> Login
-          with email
+    <DynamicContainer className="flex flex-col justify-between p-4 bg-[#713cbc] rounded-[28px] text-left text-white h-full">
+      <DynamicDiv className="flex items-start gap-2">
+         <div className="h-12 w-12  bg-gradient-to-tr from-slate-200 via-neutral-100 to-slate-100 p-[2px] rounded-lg">
+            <img src="/images/personal-img.jpg" className="rounded-lg object-cover h-full w-full" />
+         </div>
+
+         <div>
+          <h4 className="text-base font-semibold">Yetunde Morenikeji</h4>
+         <p className="flex gap-2 items-center text-sm"><span>Frontend Engineer</span><span>•</span><span>Nigeria</span></p>
+         </div>
+        
+      </DynamicDiv>
+      <DynamicDiv className=" tracking-tight text-sm text-slate-50">
+        <p>    I see frontend as the bridge between design, code, and people.
+It’s not only about writing clean interfaces but creating products that serve real needs.
+That’s the value I bring to every project I work on.</p>
+    
+      </DynamicDiv>
+      <DynamicDiv>
+         <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className=""
+          >
+            <div className="grid grid-cols-3 divide-x-2 divide-slate-300/30 text-sm gap-1 place-items-center text-center">
+             <div className="flex justify-center flex-col items-center w-full">
+                <div className="text-slate-100">Projects</div>
+                <div className="font-semibold">
+                  30
+                </div>
+              
+              </div>
+              <div className="flex justify-center flex-col items-center w-full">
+                <div className="text-slate-100">Response Time</div>
+                <div className="font-semibold">
+                  24h
+                </div>
+              </div>
+             
+              <div className="flex justify-center flex-col items-center w-full">
+                 <p className="text-slate-100">Rating</p>
+                <p className="font-semibold flex items-center">
+                 <Star size={14} className="mr-1 fill-yellow-400 text-yellow-400" /> 4.8
+                </p>
+                
+              </div>
+            </div>
+          </motion.div>
+      </DynamicDiv>
+      <DynamicDiv className="grid-cols-2 grid gap-3">
+        <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-opacity-95">
+           Hire now
         </button>
-        <button className="mt-1 ">
-          <User className="mr-2 h-4 w-4 fill-cyan-400 text-cyan-400" /> Join the
-          cult now
+        <button className="bg-white text-black px-4 py-2 rounded-lg hover:bg-opacity-95 ">
+          View projects
         </button>
       </DynamicDiv>
     </DynamicContainer>
   );
   // Render function for other states
   const renderOtherStates = () => (
-    <div className="flex items-center justify-center h-full w-full">
-      <div>
-        <ArrowUpLeftSquareIcon className="text-white" />
+     <DynamicContainer className="flex items-center justify-center h-full w-full">
+      <div className="relative w-full flex items-center">
+        <DynamicDescription
+          className={`absolute text-white left-4 ${Glass.className}  my-auto text-2xl font-bold tracking-tighter `}
+        >
+          theTechgirl
+        </DynamicDescription>
+        <DynamicDescription className="absolute right-4  my-auto text-lg font-medium tracking-tighter text-white ">
+          <span className="h-7 w-7 rounded-full bg-slate-200 flex items-center justify-center">
+            <Github className=" h-5 w-5 animate-pulse text-[#713cbc]" />
+          </span>
+        </DynamicDescription>
       </div>
-      <p className="text-white">cycle states</p>
-    </div>
+    </DynamicContainer>
   );
   // Main render logic based on size
   function renderState() {
@@ -341,7 +392,7 @@ export function AnimatedProfile() {
       <button
         onClick={cycleBlobStates}
         disabled={blobState.isAnimating}
-        className="right-4 -top-4 absolute bg-black text-white p-2 border rounded-md flex justify-center items-center gap-2 max-w-[200px] "
+        className="-right-4 -top-4 absolute bg-[#713cbc] text-white p-2 border rounded-md flex justify-center items-center gap-2 max-w-[200px] "
       >
         <MousePointerClickIcon className="h-4 w-4 scale-x-[-1]" />
       </button>

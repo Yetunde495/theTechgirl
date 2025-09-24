@@ -100,8 +100,8 @@ const DynamicIslandSizePresets: Record<SizePresets, Preset> = {
     borderRadius: 42,
   },
   [SIZE_PRESETS.MEDIUM]: {
-    width: 371,
-    aspectRatio: 210 / 371,
+    width: 400,
+    aspectRatio: 400 / 500,
     borderRadius: 22,
   },
   [SIZE_PRESETS.LARGE]: {

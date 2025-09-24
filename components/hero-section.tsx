@@ -1,10 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { ContainerTextFlip } from "./ui/container-text-flip";
-import { MeriedaFont, Sans } from "@/app/fonts";
-
-
-
+import { Sans } from "@/app/fonts";
 
 export default function Hero() {
   const words = ["Expert", "Developer", "Engineer"];
@@ -12,26 +9,24 @@ export default function Hero() {
     <div className="">
       <motion.div>
         <motion.h1
-          className={`text-4xl md:text-5xl xl:text-[44px] ${Sans.className} w-full font-semibold mb-2 tracking-tight`}
+          className={`text-3xl md:text-5xl xl:text-[44px] ${Sans.className} w-full font-semibold mb-2 tracking-tight`}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className={``}>
-            Hey! I'm
-          </span>{" "}
-          <span className="text-zinc-900 dark:text-white">Yetunde</span>
+          <span className={` text-neutral-400 dark:text-slate-200`}>Hey!</span>{" "}
+          <span className="text-zinc-900 dark:text-white">I'm Yetunde</span>
         </motion.h1>
 
-      
         <motion.div
-          className={`text-4xl md:text-5xl xl:text-[44px] ${Sans.className} font-semibold text-zinc-900 dark:text-white mb-6 tracking-tight`}
+          className={`text-3xl md:text-5xl xl:text-[44px] ${Sans.className} font-semibold text-zinc-900 dark:text-white mb-6 tracking-tight`}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
           <h1 className="inline-block">
-           a Frontend <ContainerTextFlip words={words} /> building products that drives growth
+            a Frontend <ContainerTextFlip words={words} /> building products
+            that drives growth
           </h1>
         </motion.div>
       </motion.div>
@@ -43,7 +38,8 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-       Collaborating with founders, designers, and engineers to shape product flows, polish UX, and create frontend solutions that are reliable.
+        Collaborating with founders, designers, and engineers to shape product
+        flows, polish UX, and create frontend solutions that are reliable.
       </motion.p>
 
       <motion.div
