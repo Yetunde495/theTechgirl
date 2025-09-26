@@ -14,7 +14,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <span className={` text-neutral-400 dark:text-slate-200`}>Hey!</span>{" "}
+          <span className={` text-[#7e7e7e] dark:text-slate-200`}>Hey!</span>{" "}
           <span className="text-zinc-900 dark:text-white">I'm Yetunde</span>
         </motion.h1>
 

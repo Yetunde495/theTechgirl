@@ -9,13 +9,15 @@ import { Footer } from "@/components/footer"
 import Hero from "@/components/hero-section"
 import { AnimatedProfile } from "@/components/animated-card"
 import { DynamicIslandProvider } from "@/components/ui/dynamic-island"
+import ToolsSection from "@/components/tools-section"
 
 export default function Home() {
   return (
     <>
       <main className="">
-        <div className="hero-section bg-cover bg-no-repeat bg-top">
         <Navigation />
+        <div className="hero-section">
+        
         <div className="container mx-auto px-4 py-[7%] flex max-lg:flex-col lg:items-center h-full min-h-[98vh]">
           <div className="w-full lg:max-w-3xl max-sm:mt-[90px] max-lg:mt-[7%]">
             <Hero />
@@ -26,7 +28,12 @@ export default function Home() {
     </DynamicIslandProvider>
           </div>
         </div>
+
+        {/* <div>
+          <ToolsSection />
+        </div> */}
       </div>
+      
         <BentoGrid />
         <ProjectsSection />
         <ProcessTimeline />

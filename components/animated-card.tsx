@@ -3,6 +3,7 @@ import { createContext, useContext, useEffect, useRef } from "react";
 import {
   ArrowUpLeftSquareIcon,
   Github,
+  Linkedin,
   Loader,
   Mail,
   MessageCircle,
@@ -175,7 +176,6 @@ export function AnimatedProfile() {
     "compact",
     "large",
     "tall",
-    "long",
     "medium",
   ];
   const cycleBlobStates = () => {
@@ -271,80 +271,79 @@ export function AnimatedProfile() {
         For me, frontend is more than visuals
       </DynamicDescription>
       <DynamicDescription className="bg-black text-white font-medium rounded-2xl tracking-tight leading-5  p-2 text-left">
-        it's about seamless solutions that carry design intent, user flow, and technical strength together.
+        it's about seamless solutions that carry design intent, user flow, and
+        technical strength together.
       </DynamicDescription>
       <DynamicTitle className=" text-4xl font-black tracking-tighter text-cyan-100 ">
         any cool cults?
       </DynamicTitle>
     </DynamicContainer>
   );
-  const renderLongState = () => (
-    <DynamicContainer className="flex items-center justify-center h-full w-full">
-      <DynamicDiv className="relative  flex w-full items-center justify-between gap-6 px-4">
-        <div>
-          <Waves className=" text-cyan-400 h-8 w-8" />
-        </div>
-        <DynamicTitle className="my-auto text-xl font-black tracking-tighter text-white ">
-          Supercalifragilisticexpialid
-        </DynamicTitle>
-      </DynamicDiv>
-    </DynamicContainer>
-  );
+ 
   const renderMediumState = () => (
     <DynamicContainer className="flex flex-col justify-between p-4 bg-[#713cbc] rounded-[28px] text-left text-white h-full">
       <DynamicDiv className="flex items-start gap-2">
-         <div className="h-12 w-12  bg-gradient-to-tr from-slate-200 via-neutral-100 to-slate-100 p-[2px] rounded-lg">
-            <img src="/images/personal-img.jpg" className="rounded-lg object-cover h-full w-full" />
-         </div>
+        <div className="h-12 w-12  bg-gradient-to-tr from-slate-200 via-neutral-100 to-slate-100 p-[2px] rounded-lg">
+          <img
+            src="/images/personal-img.jpg"
+            className="rounded-lg object-cover h-full w-full"
+          />
+        </div>
 
-         <div>
+        <div>
           <h4 className="text-base font-semibold">Yetunde Morenikeji</h4>
-         <p className="flex gap-2 items-center text-sm"><span>Frontend Engineer</span><span>•</span><span>Nigeria</span></p>
-         </div>
-        
+          <p className="flex gap-2 items-center text-sm">
+            <span>Frontend Engineer</span>
+            <span>•</span>
+            <span>Nigeria</span>
+          </p>
+        </div>
       </DynamicDiv>
       <DynamicDiv className=" tracking-tight text-sm text-slate-50">
-        <p>    I see frontend as the bridge between design, code, and people.
+        <p>
+          {" "}
+          Expert Front-end Developer with 3 years of experience in designing,
+          developing and maintaining high-performing, and user-focused web
+          applications.
+          {/* .   I see frontend as the bridge between design, code, and people.
 It’s not only about writing clean interfaces but creating products that serve real needs.
-That’s the value I bring to every project I work on.</p>
-    
+That’s the value I bring to every project I work on.*/}
+        </p>
       </DynamicDiv>
       <DynamicDiv>
-         <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1, delay: 0.5 }}
-            className=""
-          >
-            <div className="grid grid-cols-3 divide-x-2 divide-slate-300/30 text-sm gap-1 place-items-center text-center">
-             <div className="flex justify-center flex-col items-center w-full">
-                <div className="text-slate-100">Projects</div>
-                <div className="font-semibold">
-                  30
-                </div>
-              
-              </div>
-              <div className="flex justify-center flex-col items-center w-full">
-                <div className="text-slate-100">Response Time</div>
-                <div className="font-semibold">
-                  24h
-                </div>
-              </div>
-             
-              <div className="flex justify-center flex-col items-center w-full">
-                 <p className="text-slate-100">Rating</p>
-                <p className="font-semibold flex items-center">
-                 <Star size={14} className="mr-1 fill-yellow-400 text-yellow-400" /> 4.8
-                </p>
-                
-              </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className=""
+        >
+          <div className="grid grid-cols-3 divide-x-2 divide-slate-300/30 text-sm gap-1 place-items-center text-center">
+            <div className="flex justify-center flex-col items-center w-full">
+              <div className="text-slate-100">Projects</div>
+              <div className="font-semibold">30</div>
             </div>
-          </motion.div>
+            <div className="flex justify-center flex-col items-center w-full">
+              <div className="text-slate-100">Clients</div>
+              <div className="font-semibold">10+</div>
+            </div>
+
+            <div className="flex justify-center flex-col items-center w-full">
+              <p className="text-slate-100">Rating</p>
+              <p className="font-semibold flex items-center">
+                <Star
+                  size={14}
+                  className="mr-1 fill-yellow-400 text-yellow-400"
+                />{" "}
+                4.8
+              </p>
+            </div>
+          </div>
+        </motion.div>
       </DynamicDiv>
       <DynamicDiv className="grid-cols-2 grid gap-3">
         <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-opacity-95">
-           Hire now
+          Hire now
         </button>
         <button className="bg-white text-black px-4 py-2 rounded-lg hover:bg-opacity-95 ">
           View projects
@@ -354,7 +353,7 @@ That’s the value I bring to every project I work on.</p>
   );
   // Render function for other states
   const renderOtherStates = () => (
-     <DynamicContainer className="flex items-center justify-center h-full w-full">
+    <DynamicContainer className="flex items-center justify-center h-full w-full">
       <div className="relative w-full flex items-center">
         <DynamicDescription
           className={`absolute text-white left-4 ${Glass.className}  my-auto text-2xl font-bold tracking-tighter `}
@@ -380,8 +379,6 @@ That’s the value I bring to every project I work on.</p>
         return renderTallState();
       case "medium":
         return renderMediumState();
-      case "long":
-        return renderLongState();
       // Optionally add cases for other states as necessary
       default:
         return renderOtherStates();
@@ -389,13 +386,38 @@ That’s the value I bring to every project I work on.</p>
   }
   return (
     <div ref={containerRef} className="h-full relative  w-full">
-      <button
-        onClick={cycleBlobStates}
-        disabled={blobState.isAnimating}
-        className="-right-4 -top-4 absolute bg-[#713cbc] text-white p-2 border rounded-md flex justify-center items-center gap-2 max-w-[200px] "
-      >
-        <MousePointerClickIcon className="h-4 w-4 scale-x-[-1]" />
-      </button>
+      <div className="w-full max-w-[400px] bg-slate-50 dark:bg-[#713cbc] shadow-xl border dark:border-none dark:border-t border-slate-200 flex items-center justify-between gap-1 px-4 py-1.5 rounded-xl mb-3">
+        <button
+          onClick={cycleBlobStates}
+          disabled={blobState.isAnimating}
+          className="hover:scale-105 dark:text-white duration-150 rounded-md flex justify-center items-center "
+        >
+          <Github className="" />
+        </button>
+        <button
+          onClick={cycleBlobStates}
+          disabled={blobState.isAnimating}
+          className="hover:scale-105 dark:text-white duration-150  flex justify-center items-center "
+        >
+          <Linkedin className="" />
+        </button>
+        <button
+          onClick={cycleBlobStates}
+          disabled={blobState.isAnimating}
+          className=" dark:text-white hover:scale-105 duration-150 rounded-md flex justify-center items-center "
+        >
+          <Mail className="" />
+        </button>
+
+        <button
+          onClick={cycleBlobStates}
+          disabled={blobState.isAnimating}
+          className=" bg-[#713cbc] text-white p-2 border dark:border-none rounded-md flex justify-center items-center gap-2 max-w-[200px] "
+        >
+          <MousePointerClickIcon className="h-5 w-5 scale-x-[-1]" />
+        </button>
+      </div>
+
       <DynamicIsland id="dynamic-blob">{renderState()}</DynamicIsland>
     </div>
   );
