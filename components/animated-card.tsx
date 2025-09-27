@@ -220,8 +220,7 @@ export function AnimatedProfile() {
   useScheduledAnimations([
     { size: "compact", delay: 1200 },
     { size: "large", delay: 1200 },
-    { size: "tall", delay: 1600 },
-    { size: "long", delay: 1800 },
+    { size: "tall", delay: 2200 },
     { size: "medium", delay: 2200 },
   ]);
   // Provide dynamic detail in such a beautiful small place :)
@@ -267,16 +266,26 @@ export function AnimatedProfile() {
   // Great for user onboarding, forms, etc
   const renderTallState = () => (
     <DynamicContainer className="  flex flex-col mt-6 w-full items-start  gap-1 px-6 font-semibold">
-      <DynamicDescription className="bg-white rounded-2xl tracking-tight leading-5  p-2">
-        For me, frontend is more than visuals
+      <DynamicDescription className="bg-white text-left rounded-2xl tracking-tight leading-5  p-2">
+        translating ideas into functional & user-friendly apps.
       </DynamicDescription>
-      <DynamicDescription className="bg-black text-white font-medium rounded-2xl tracking-tight leading-5  p-2 text-left">
+      {/* <DynamicDescription className="bg-black text-white font-medium rounded-2xl tracking-tight leading-5  p-2 text-left">
         it's about seamless solutions that carry design intent, user flow, and
         technical strength together.
-      </DynamicDescription>
-      <DynamicTitle className=" text-4xl font-black tracking-tighter text-cyan-100 ">
-        any cool cults?
-      </DynamicTitle>
+      </DynamicDescription> */}
+      <DynamicDiv>
+        <div className="">
+          <DotLottieReact
+            src="https://lottie.host/95f83961-5916-46d8-a611-5a6d3371877c/Wkron6xWQV.lottie"
+            loop
+            autoplay
+            className="h-full  w-full "
+          />
+        </div>
+      </DynamicDiv>
+      {/* <DynamicTitle className=" text-4xl font-black tracking-tighter text-cyan-100 ">
+        awesome right?
+      </DynamicTitle> */}
     </DynamicContainer>
   );
  
@@ -341,12 +350,9 @@ That’s the value I bring to every project I work on.*/}
           </div>
         </motion.div>
       </DynamicDiv>
-      <DynamicDiv className="grid-cols-2 grid gap-3">
-        <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-opacity-95">
-          Hire now
-        </button>
-        <button className="bg-white text-black px-4 py-2 rounded-lg hover:bg-opacity-95 ">
-          View projects
+      <DynamicDiv className=" gap-3">
+        <button className="bg-white text-black w-full px-4 py-2 rounded-lg hover:bg-opacity-95 ">
+          Download CV
         </button>
       </DynamicDiv>
     </DynamicContainer>

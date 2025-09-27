@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import { ContainerTextFlip } from "./ui/container-text-flip";
 import { Sans } from "@/app/fonts";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const words = ["Expert", "Developer", "Engineer"];
@@ -43,20 +45,22 @@ export default function Hero() {
       </motion.p>
 
       <motion.div
-        className="flex flex-col sm:flex-row gap-4"
+        className="flex flex-row gap-4"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        {/* <Button asChild size="lg">
-                <Link href="#projects">
-                  View Projects
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="#contact">Contact Me</Link>
-              </Button> */}
+        <Button variant="primary" icon={<ArrowRight className="h-4 w-4" />}>
+          View Projects
+          {/* <Link href="#projects">
+                  
+                  
+                </Link> */}
+        </Button>
+        <Button variant="secondary">
+          Contact Me
+          {/* <Link href="#contact"></Link> */}
+        </Button>
       </motion.div>
     </div>
   );

@@ -35,7 +35,7 @@ export function Navigation() {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4 z-999">
             <ThemeToggle />
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            <NavbarButton variant="dark">Hire Me</NavbarButton>
           </div>
         </NavBody>
 
