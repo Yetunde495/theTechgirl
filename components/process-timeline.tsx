@@ -1,60 +1,139 @@
-"use client"
+"use client";
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import { Search, Lightbulb, Code, Rocket, CheckCircle } from "lucide-react"
-import { useRef } from "react"
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Search, Lightbulb, Code, Rocket, CheckCircle } from "lucide-react";
+import { useRef } from "react";
+import { Timeline } from "./ui/timeline";
 
 const processSteps = [
   {
     id: 1,
     title: "Discovery & Research",
-    description: "Deep dive into your business goals, user needs, and competitive landscape to create a strategic foundation.",
+    description:
+      "Deep dive into your business goals, user needs, and competitive landscape to create a strategic foundation.",
     icon: Search,
     duration: "1-2 weeks",
-    deliverables: ["User Research", "Competitive Analysis", "Technical Audit"]
+    deliverables: ["User Research", "Competitive Analysis", "Technical Audit"],
   },
   {
     id: 2,
     title: "Design & Prototyping",
-    description: "Create wireframes, interactive prototypes, and high-fidelity designs that solve real user problems.",
+    description:
+      "Create wireframes, interactive prototypes, and high-fidelity designs that solve real user problems.",
     icon: Lightbulb,
     duration: "2-3 weeks",
-    deliverables: ["Wireframes", "Interactive Prototype", "Design System"]
+    deliverables: ["Wireframes", "Interactive Prototype", "Design System"],
   },
   {
     id: 3,
     title: "Development",
-    description: "Build scalable, performant applications using modern frameworks and best practices.",
+    description:
+      "Build scalable, performant applications using modern frameworks and best practices.",
     icon: Code,
     duration: "4-8 weeks",
-    deliverables: ["Clean Code", "Performance Optimization", "Cross-browser Testing"]
+    deliverables: [
+      "Clean Code",
+      "Performance Optimization",
+      "Cross-browser Testing",
+    ],
   },
   {
     id: 4,
     title: "Launch & Optimization",
-    description: "Deploy your application and continuously optimize based on real user data and feedback.",
+    description:
+      "Deploy your application and continuously optimize based on real user data and feedback.",
     icon: Rocket,
     duration: "1-2 weeks",
-    deliverables: ["Deployment", "Analytics Setup", "Performance Monitoring"]
+    deliverables: ["Deployment", "Analytics Setup", "Performance Monitoring"],
   },
   {
     id: 5,
     title: "Success & Growth",
-    description: "Ongoing support and enhancements to ensure your digital presence continues to drive results.",
+    description:
+      "Ongoing support and enhancements to ensure your digital presence continues to drive results.",
     icon: CheckCircle,
     duration: "Ongoing",
-    deliverables: ["Maintenance", "Feature Updates", "Growth Analytics"]
-  }
-]
+    deliverables: ["Maintenance", "Feature Updates", "Growth Analytics"],
+  },
+];
+
+export function Process() {
+  const data = [
+    {
+      title: "Discovery & Planning",
+      content: (
+        <div>
+          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+            We take the time to understand your challenges and goals. I start
+            with an in-depth consultation to understand your goals, target
+            audience, and project requirements. Then I outline a clear project
+            plan with timelines and milestones.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Development",
+      content: (
+        <div>
+          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+            I build your application using industry-leading tools, modern
+            frameworks and best practices, with regular progress updates, live
+            previews, and opportunities for feedback.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Testing & Optimization",
+      content: (
+        <div>
+          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+            Thorough testing across devices and browsers, performance
+            optimization, and security checks.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Launch & Deployment",
+      content: (
+        <div>
+          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+            Deploy your application with proper hosting setup, domain
+            configuration, and SSL certificates.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: "Support & Maintenance",
+      content: (
+        <div>
+          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+            Even after launch, we’re here to ensure everything runs smoothly
+            Ongoing support, updates, and maintenance to ensure your application
+            continues to perform optimally.
+          </p>
+        </div>
+      ),
+    },
+  ];
+  return (
+    <div className="w-full py-24 px-6 bg-white dark:bg-gray-900/70">
+      <Timeline data={data} />
+    </div>
+  );
+}
 
 export function ProcessTimeline() {
-  const containerRef = useRef(null)
+  const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start center", "end center"]
-  })
+    offset: ["start center", "end center"],
+  });
 
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
+  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
     <section id="process" ref={containerRef} className="py-24 px-6">
@@ -68,10 +147,14 @@ export function ProcessTimeline() {
         >
           <h2 className="font-playfair text-4xl md:text-6xl font-bold mb-6">
             My
-            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent"> Process</span>
+            <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              {" "}
+              Process
+            </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A proven methodology that transforms ideas into exceptional digital experiences
+            A proven methodology that transforms ideas into exceptional digital
+            experiences
           </p>
         </motion.div>
 
@@ -94,11 +177,15 @@ export function ProcessTimeline() {
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`flex items-center ${
-                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 } flex-col md:flex-row`}
               >
                 {/* Content */}
-                <div className={`flex-1 ${index % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16'} mb-8 md:mb-0`}>
+                <div
+                  className={`flex-1 ${
+                    index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"
+                  } mb-8 md:mb-0`}
+                >
                   <motion.div
                     whileHover={{ y: -5 }}
                     transition={{ duration: 0.3 }}
@@ -112,15 +199,15 @@ export function ProcessTimeline() {
                         0{step.id}
                       </span>
                     </div>
-                    
+
                     <h3 className="font-playfair text-2xl md:text-3xl font-bold mb-4">
                       {step.title}
                     </h3>
-                    
+
                     <p className="text-muted-foreground mb-6 leading-relaxed">
                       {step.description}
                     </p>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {step.deliverables.map((item) => (
                         <span
@@ -156,5 +243,5 @@ export function ProcessTimeline() {
         </div>
       </div>
     </section>
-  )
+  );
 }

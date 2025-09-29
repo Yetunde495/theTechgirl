@@ -10,7 +10,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        playfair: ['var(--font-playfair)'],
         inter: ['var(--font-inter)'],
       },
       backgroundImage: {

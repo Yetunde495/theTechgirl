@@ -1,13 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Playfair_Display, Inter} from 'next/font/google';
+import { Inter} from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  variable: '--font-playfair',
-  display: 'swap',
-});
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -29,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${playfair.variable} ${inter.variable} font-inter antialiased overflow-x-hidden`}>
+      <body className={` ${inter.variable} font-inter antialiased overflow-x-hidden`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

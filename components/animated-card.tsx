@@ -172,12 +172,7 @@ export function AnimatedProfile() {
   const { state: blobState, setSize } = useDynamicIslandSize();
   const containerRef = useRef<HTMLDivElement | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const blobStates: SizePresets[] = [
-    "compact",
-    "large",
-    "tall",
-    "medium",
-  ];
+  const blobStates: SizePresets[] = ["compact", "medium"];
   const cycleBlobStates = () => {
     const currentIndex = blobStates.indexOf(blobState.size);
     const nextIndex = (currentIndex + 1) % blobStates.length;
@@ -219,8 +214,6 @@ export function AnimatedProfile() {
   }, [blobState.size]);
   useScheduledAnimations([
     { size: "compact", delay: 1200 },
-    { size: "large", delay: 1200 },
-    { size: "tall", delay: 2200 },
     { size: "medium", delay: 2200 },
   ]);
   // Provide dynamic detail in such a beautiful small place :)
@@ -288,7 +281,7 @@ export function AnimatedProfile() {
       </DynamicTitle> */}
     </DynamicContainer>
   );
- 
+
   const renderMediumState = () => (
     <DynamicContainer className="flex flex-col justify-between p-4 bg-[#713cbc] rounded-[28px] text-left text-white h-full">
       <DynamicDiv className="flex items-start gap-2">
@@ -379,10 +372,6 @@ That’s the value I bring to every project I work on.*/}
     switch (blobState.size) {
       case "compact":
         return renderCompactState();
-      case "large":
-        return renderLargeState();
-      case "tall":
-        return renderTallState();
       case "medium":
         return renderMediumState();
       // Optionally add cases for other states as necessary

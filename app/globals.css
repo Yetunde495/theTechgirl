@@ -22,6 +22,7 @@
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
+    --font-glassantiqua: 'Glass Antiqua', cursive;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
     --primary: 265, 52%, 49%;
@@ -149,6 +150,28 @@
   }
 }
 
+@theme inline {
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+}
+
 .font-playfair {
   font-family: var(--font-playfair);
 }
@@ -194,25 +217,3 @@
   animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
 }
 
-/* .hero-section {
-   background: linear-gradient(
-  180deg,
-  #ffffff 0%,
-  #ffffff00 70%,
-  #e8d6ff 92%,
-  #c9a9f9 100%
-);
-  
-} */
-
-
-/* For light mode (optional, usually default) */
-/* /* .light .hero-section { */
-  /* background-image: url('/images/hero-soft-purple-gradient.png'); */
-  /* background: linear-gradient(
-  180deg,
-  #ffffff 0%,
-  #ffffff 74%,
-  #e8d6ff 92%,
-  #c9a9f9 100%
-); */
