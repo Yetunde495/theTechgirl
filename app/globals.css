@@ -6,11 +6,12 @@
   --foreground-rgb: 240, 240, 240;
   --background-start-rgb: 240, 240, 240;
   --background-end-rgb: 255, 255, 255;
+   /* color:rgb(248, 247, 247) */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 248, 247, 247;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
@@ -18,7 +19,7 @@
 
 @layer base {
   :root {
-    --background: 0, 0%, 94%;
+    --background: 0, 7%, 97%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
@@ -184,7 +185,7 @@
 }
 
 .glass {
-  @apply bg-white/10 dark:bg-white/5 backdrop-blur-lg border border-white/20 dark:border-white/10;
+  @apply bg-black/5 text-primary dark:bg-white/5 backdrop-blur-lg border border-white/20 dark:border-white/10;
 }
 
 .glow {
