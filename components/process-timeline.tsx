@@ -63,10 +63,10 @@ export function Process() {
       title: "Discovery & Planning",
       content: (
         <div>
-          <p className="text-lg md:text-xl text-muted-foreground font-semibold mb-8">
-            We take the time to understand your challenges and goals. I start
-            with an in-depth consultation to understand your goals, target
-            audience, and project requirements. Then I outline a clear project
+          <p className="text-base md:text-xl text-muted-foreground font-medium mb-8">
+            I start
+            with an in-depth consultation to understand your goals, challenges
+            and project requirements. Then I outline a clear project
             plan with timelines and milestones.
           </p>
         </div>
@@ -76,7 +76,7 @@ export function Process() {
       title: "Development",
       content: (
         <div>
-          <p className="text-lg md:text-xl text-muted-foreground font-semibold mb-8">
+          <p className="text-base md:text-xl text-muted-foreground font-medium mb-8">
             I build your application using industry-leading tools, modern
             frameworks and best practices, with regular progress updates, live
             previews, and opportunities for feedback.
@@ -88,7 +88,7 @@ export function Process() {
       title: "Testing & Optimization",
       content: (
         <div>
-          <p className="text-lg md:text-xl text-muted-foreground font-semibold mb-8">
+          <p className="text-base md:text-xl text-muted-foreground font-medium mb-8">
             Thorough testing across devices and browsers, performance
             optimization, and security checks.
           </p>
@@ -110,9 +110,9 @@ export function Process() {
       title: "Support & Maintenance",
       content: (
         <div>
-          <p className="text-lg md:text-xl text-muted-foreground font-semibold mb-8">
-            Even after launch, we’re here to ensure everything runs smoothly
-            Ongoing support, updates, and maintenance to ensure your application
+          <p className="text-base md:text-xl text-muted-foreground font-medium mb-8">
+            Even after launch, I offer
+            technical support, updates, and maintenance to ensure your application
             continues to perform optimally.
           </p>
         </div>
@@ -120,7 +120,7 @@ export function Process() {
     },
   ];
   return (
-    <div className="w-full py-24 px-6 bg-white dark:bg-gray-900/70">
+    <div className="w-full py-24 px-[4%] bg-white dark:bg-gray-900/70">
       <Timeline data={data} />
     </div>
   );

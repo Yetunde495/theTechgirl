@@ -29,7 +29,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="w-full md:px-10" ref={containerRef}>
-      <div className="max-w-7xl mx-auto pt-15 px-4 md:px-8 lg:px-10 max-sm:text-center text-left">
+      <div className="max-w-7xl mx-auto pt-15 px-4 md:px-8 lg:px-10 text-left">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -45,7 +45,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         >
           Built around your goals
         </h2>
-        <p className="text-muted-foreground max-sm:mx-auto text-lg max-w-3xl">
+        <p className="text-muted-foreground text-lg max-w-3xl">
           Every step is shaped around what you need. I focus on understanding
           your idea, planning carefully, and delivering something that works
           exactly the way you want.{" "}
@@ -59,8 +59,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="flex justify-start pt-10 md:pt-20 md:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full [background:linear-gradient(to_bottom,#ad46ff,#713cbc)] text-lg md:text-xl text-white flex items-center justify-center">
-                {/* <div className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" /> */}
+              <div className="h-10 absolute left-3 md:left-3 w-10 max-sm:w-8 max-sm:h-8 rounded-full [background:linear-gradient(to_bottom,#ad46ff,#713cbc)]  sm:text-lg md:text-xl text-white flex items-center justify-center">
                 <span>{index + 1}</span>
               </div>
               <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl font-bold ">
@@ -68,8 +67,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold">
+            <div className="relative pl-20 max-sm:pl-14 pr-4 max-sm:pr-1.5 md:pl-4 w-full">
+              <h3 className="md:hidden block text-2xl mb-4 text-left">
                 {item.title}
               </h3>
                 {item.content}
