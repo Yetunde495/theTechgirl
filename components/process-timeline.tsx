@@ -63,7 +63,7 @@ export function Process() {
       title: "Discovery & Planning",
       content: (
         <div>
-          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground font-semibold mb-8">
             We take the time to understand your challenges and goals. I start
             with an in-depth consultation to understand your goals, target
             audience, and project requirements. Then I outline a clear project
@@ -76,7 +76,7 @@ export function Process() {
       title: "Development",
       content: (
         <div>
-          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground font-semibold mb-8">
             I build your application using industry-leading tools, modern
             frameworks and best practices, with regular progress updates, live
             previews, and opportunities for feedback.
@@ -88,29 +88,29 @@ export function Process() {
       title: "Testing & Optimization",
       content: (
         <div>
-          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground font-semibold mb-8">
             Thorough testing across devices and browsers, performance
             optimization, and security checks.
           </p>
         </div>
       ),
     },
-    {
-      title: "Launch & Deployment",
-      content: (
-        <div>
-          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
-            Deploy your application with proper hosting setup, domain
-            configuration, and SSL certificates.
-          </p>
-        </div>
-      ),
-    },
+    // {
+    //   title: "Launch & Deployment",
+    //   content: (
+    //     <div>
+    //       <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+    //         Deploy your application with proper hosting setup, domain
+    //         configuration, and SSL certificates.
+    //       </p>
+    //     </div>
+    //   ),
+    // },
     {
       title: "Support & Maintenance",
       content: (
         <div>
-          <p className="text-neutral-800 2xl:text-5xl md:text-4xl text-3xl font-outfit font-semibold mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground font-semibold mb-8">
             Even after launch, we’re here to ensure everything runs smoothly
             Ongoing support, updates, and maintenance to ensure your application
             continues to perform optimally.
