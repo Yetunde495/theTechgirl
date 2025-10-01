@@ -22,11 +22,6 @@ export default function Home() {
               <Hero />
             </div>
             <div className="w-full flex justify-end">
-              {/* <DynamicIslandProvider initialSize={"default"}>
-                <div>
-                  <AnimatedProfile />
-                </div>
-              </DynamicIslandProvider> */}
               <Image 
                src="/images/hero-img.png"
                width={600}
