@@ -21,7 +21,7 @@ export default function Home() {
             <div className="w-full lg:max-w-3xl max-sm:mt-[90px] max-lg:mt-[7%]">
               <Hero />
             </div>
-            <div className="w-full flex flex-col relative gap-3 justify-end">
+            <div className="w-full flex flex-col items-center relative gap-3 justify-end">
               <Image
                 src="/images/hero-img.png"
                 width={600}
@@ -29,7 +29,7 @@ export default function Home() {
                 alt="hero-image"
                 className="lg:scale-90 drop-shadow-2xl"
               />
-              <div className="w-full -mt-6 sm:ml-[4%]  sm:max-w-[75%] lg:max-w-[400px] bg-slate-50 dark:bg-[#713cbc] shadow-xl border dark:border-none dark:border-t border-slate-200 flex items-center justify-between gap-1 px-4 py-1.5 rounded-xl mb-3">
+              <div className="w-full -mt-6 sm:ml-[4%]  sm:max-w-[75%] bg-slate-50 dark:bg-[#713cbc] shadow-xl border dark:border-none dark:border-t border-slate-200 flex items-center justify-between gap-1 px-4 py-1.5 rounded-xl mb-3">
                 <button className="hover:scale-105 dark:text-white duration-150 rounded-md flex justify-center items-center ">
                   <Github className="" />
                 </button>
