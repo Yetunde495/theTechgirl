@@ -9,6 +9,7 @@ import Hero from "@/components/hero-section";
 import ToolsSection from "@/components/tools-section";
 import Image from "next/image";
 import { Github, Linkedin, Mail, MousePointerClickIcon } from "lucide-react";
+import AboutSection from "@/components/about-section";
 
 export default function Home() {
   return (
@@ -51,6 +52,8 @@ export default function Home() {
         <BentoGrid />
         <ProjectsSection />
         <Process />
+        <AboutSection />
+        <ToolsSection />
         <ValueProposition />
         <CTASection />
       </main>
