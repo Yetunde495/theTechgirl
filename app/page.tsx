@@ -2,7 +2,6 @@ import { Navigation } from "@/components/navigation";
 import { BentoGrid } from "@/components/bento-grid";
 import { ProjectsSection } from "@/components/projects-section";
 import { Process } from "@/components/process-timeline";
-import { TestimonialsSection } from "@/components/testimonials-section";
 import { ValueProposition } from "@/components/value-proposition";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
@@ -52,7 +51,6 @@ export default function Home() {
         <BentoGrid />
         <ProjectsSection />
         <Process />
-        <TestimonialsSection />
         <ValueProposition />
         <CTASection />
       </main>

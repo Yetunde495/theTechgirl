@@ -19,18 +19,7 @@ const projects = [
     link: "https://www.bytedegrees.com/",
     github: "#",
   },
-  {
-    id: 2,
-    title: "CurateLearn",
-    description:
-      "Curatelearn is a personalized AI-Copilot for self-learning that includes an analytics dashboard, real-time chat, a structured resource library, quizzes, flashcards, and a smart wallet system",
-    image:
-      "/images/projects/CurateLearn.png",
-    tags: ["React", "WebSocket", "TailwindCSS", "PayStack"],
-    metrics: { satisfaction: "+85%", efficiency: "+35%", errors: "-70%" },
-    link: "https://curatelearn.com/",
-    github: "#",
-  },
+  
   {
     id: 3,
     title: "Mobile Banking App",
@@ -41,6 +30,18 @@ const projects = [
     tags: ["React Native", "Biometrics", "Redux", "Expo"],
     metrics: { security: "100%", rating: "4.8/5", downloads: "100K+" },
     link: "#",
+    github: "#",
+  },
+  {
+    id: 2,
+    title: "CurateLearn",
+    description:
+      "Curatelearn is a personalized AI-Copilot for self-learning that includes an analytics dashboard, real-time chat, a structured resource library, quizzes, flashcards, and a smart wallet system",
+    image:
+      "/images/projects/CurateLearn.png",
+    tags: ["React", "WebSocket", "TailwindCSS", "PayStack"],
+    metrics: { satisfaction: "+85%", efficiency: "+35%", errors: "-70%" },
+    link: "https://curatelearn.com/",
     github: "#",
   },
 ];
@@ -192,8 +193,8 @@ export function ProjectsSection() {
           Projects that show what I do best
         </h2>
         <p className="text-muted-foreground text-lg max-w-3xl">
-          Here are some of the products I’ve helped shape; from E-learning
-          platforms to e-commerce. Each one taught me something new and shows
+          Here are some of the products I’ve helped shape; from AI-Powered
+          platforms to Edu solutions. Each one taught me something new and shows
           how I build clean, useful, and people-friendly websites.{" "}
         </p>
       </div>
