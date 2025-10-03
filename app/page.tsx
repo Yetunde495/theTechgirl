@@ -53,7 +53,7 @@ export default function Home() {
         <ProjectsSection />
         <Process />
         <AboutSection />
-        <ToolsSection />
+        {/* <ToolsSection /> */}
         <ValueProposition />
         <CTASection />
       </main>

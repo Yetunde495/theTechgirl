@@ -1,7 +1,7 @@
 "use client";
 import { Sans } from "@/app/fonts";
 import { useScroll, useTransform, motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Download, FileText } from "lucide-react";
 import React, { useEffect, useRef, useState } from "react";
 
 const AboutSection: React.FC = () => {
@@ -49,21 +49,24 @@ const AboutSection: React.FC = () => {
             adds up to a better experience.{" "}
           </p>
           <p className="text-muted-foreground text-lg max-w-3xl">
-            When we work together, you get more than just code — you get a
-            partner who listens, understands your goals, and brings clarity to
-            the process. Outside of work, I enjoy reading crime thriller novels,
-            sharing frontend tips, and exploring culture through food and
-            animes.{" "}
+            Outside of work, I enjoy reading crime thriller novels, sharing
+            frontend tips, and exploring culture through food and animes.{" "}
           </p>
-
-          <a>
-            <button className="group bg-primary shadow-[#713cbc]/40 text-white hover:bg-opacity-90 relative inline-flex  shadow-xl hover:-translate-y-0.5 transition duration-200  items-center justify-center rounded-full px-6 font-medium">
-              <span className="py-2.5">Let’s Build Together</span>
-              <div className="ml-1 rounded-full bg-white h-5 w-5 flex justify-center items-center transition-all duration-200 group-hover:translate-x-2">
-                <ArrowRight className="h-4 w-4 text-black" />
+          <div className="flex mt-4 items-center gap-4 my-3">
+            <button className="group relative inline-flex shadow-gray-700/40 dark:bg-white dark:text-black shadow-xl py-2 items-center hover:pr-3 delay-75 justify-center rounded-full bg-neutral-950 pl-6 pr-1 transition font-medium text-neutral-50">
+              <span className="z-10 pr-2">Let's Build Together</span>
+              <div className="flex items-center justify-center h-7 w-7 -rotate-45  group-hover:translate-x-2 duration-200 group-hover:rotate-0 rounded-full bg-white dark:bg-black transition-all">
+                <ArrowRight className="h-5 w-5 text-neutral-800 dark:text-neutral-50" />
               </div>
             </button>
-          </a>
+            <button className="group relative inline-flex py-2 shadow-[#713cbc]/40 shadow-xl items-center hover:pr-3 delay-75 justify-center rounded-full bg-primary pl-6 pr-1 transition font-medium text-neutral-50">
+              <span className="z-10 pr-2">Download CV</span>
+              <div className="flex items-center justify-center h-7 w-7  group-hover:translate-x-2 transition-all duration-200 rounded-full bg-white ">
+                <FileText className="h-5 w-5 text-neutral-800 group-hover:hidden transition-all duration-200" />
+                <Download className="h-5 w-5 text-neutral-800 hidden group-hover:block transition-all duration-200" />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
     </section>
