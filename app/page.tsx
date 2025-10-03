@@ -6,7 +6,6 @@ import { ValueProposition } from "@/components/value-proposition";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 import Hero from "@/components/hero-section";
-import ToolsSection from "@/components/tools-section";
 import Image from "next/image";
 import { Github, Linkedin, Mail, MousePointerClickIcon } from "lucide-react";
 import AboutSection from "@/components/about-section";
@@ -29,7 +28,7 @@ export default function Home() {
                 alt="hero-image"
                 className="lg:scale-90 drop-shadow-2xl"
               />
-              <div className="w-full -mt-6 sm:ml-[4%]  sm:max-w-[75%] bg-slate-50 dark:bg-[#713cbc] shadow-xl border dark:border-none dark:border-t border-slate-200 flex items-center justify-between gap-1 px-4 py-1.5 rounded-xl mb-3">
+              <div className="w-full -mt-6  lg:-mt-[10%] z-[999] sm:ml-[4%]  sm:max-w-[75%] bg-slate-50 dark:bg-[#713cbc] shadow-xl border dark:border-none dark:border-t border-slate-200 flex items-center justify-between gap-1 px-4 py-1.5 rounded-xl mb-3">
                 <button className="hover:scale-105 dark:text-white duration-150 rounded-md flex justify-center items-center ">
                   <Github className="" />
                 </button>

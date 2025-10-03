@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, ArrowUpRight, ArrowRight } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
 import ParallaxCards from "./ui/parallax-cards";
 import { Sans } from "@/app/fonts";
 import { Button } from "./ui/button";
@@ -11,7 +11,7 @@ const projects = [
     id: 1,
     title: "ByteDegree",
     description:
-      "An e-learning platform built for students, tutors, and institutions. I worked on modern landing pages, interactive complex dashboards, and payment system, that made teaching and learning feel more connected.",
+      "An e-learning platform built for students, tutors, and institutions. This app features advanced course-creation & management tools, modern landing pages, analytics dashboards, and stripe payment system.",
     image:
       "/images/projects/ByteDegree.png",
     tags: ["React", "TypeScript", "Stripe", "Framer Motion"],
@@ -55,7 +55,7 @@ export function ProjectsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, delay: index * 0.2 }}
-        className={`grid container mx-auto px-[4%] grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+        className={`grid w-full mx-auto px-[3%] no-scrollbar grid-cols-1 lg:grid-cols-2 gap-y-6 gap-x-12 items-center ${
           index % 2 === 1 ? "lg:grid-flow-dense" : ""
         }`}
       >
@@ -67,11 +67,11 @@ export function ProjectsSection() {
             index % 2 === 1 ? "lg:col-start-2" : ""
           }`}
         >
-          <div className="relative overflow-hidden rounded-2xl">
+          <div className="relative lg:min-h-[384px] max-lg:max-h-[300px] max-sm:max-h-[250px] overflow-hidden rounded-2xl">
             <img
               src={project.image}
               alt={project.title}
-              className="w-full md:min-h-[384px] h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full  h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -84,14 +84,7 @@ export function ProjectsSection() {
                 >
                   <ExternalLink className="w-4 h-4" />
                 </motion.a>
-                {/* <motion.a
-                  href={project.github}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                  className="glass p-2 rounded-full hover:glow"
-                >
-                  <Github className="w-4 h-4" />
-                </motion.a> */}
+                
               </div>
             </div>
           </div>
@@ -175,8 +168,8 @@ export function ProjectsSection() {
   }));
 
   return (
-    <section id="projects" className="py-24">
-      <div className="max-w-7xl mx-auto pt-15 px-4 md:px-8 lg:px-10 text-left">
+    <section id="projects" className="py-24 container mx-auto">
+      <div className=" pt-15 px-4 md:px-8 lg:px-10 text-left">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
