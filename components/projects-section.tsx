@@ -12,24 +12,22 @@ const projects = [
     title: "ByteDegree",
     description:
       "An e-learning platform built for students, tutors, and institutions. This app features advanced course-creation & management tools, modern landing pages, analytics dashboards, and stripe payment system.",
-    image:
-      "/images/projects/ByteDegree.png",
+    image: "/images/projects/ByteDegree.png",
     tags: ["React", "TypeScript", "Stripe", "Framer Motion"],
     metrics: { conversion: "+40%", performance: "+60%", users: "50K+" },
     link: "https://www.bytedegrees.com/",
     github: "#",
   },
-  
+
   {
     id: 3,
-    title: "Mobile Banking App",
+    title: "SkyEyez",
     description:
-      "Secure and accessible mobile banking interface with biometric authentication and smooth micro-interactions",
-    image:
-      "https://images.pexels.com/photos/164527/pexels-photo-164527.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "This is an AI-powered Surveillance solution that allows users query their security cameras for specific footage, create smart alerts for unusual activities, or access your cameras live from your device in real-time.",
+    image: "/images/projects/SkyEyez.webp",
     tags: ["React Native", "Biometrics", "Redux", "Expo"],
     metrics: { security: "100%", rating: "4.8/5", downloads: "100K+" },
-    link: "#",
+    link: "https://skyeyez.ai/",
     github: "#",
   },
   {
@@ -37,8 +35,7 @@ const projects = [
     title: "CurateLearn",
     description:
       "Curatelearn is a personalized AI-Copilot for self-learning that includes an analytics dashboard, real-time chat, a structured resource library, quizzes, flashcards, and a smart wallet system",
-    image:
-      "/images/projects/CurateLearn.png",
+    image: "/images/projects/CurateLearn.png",
     tags: ["React", "WebSocket", "TailwindCSS", "PayStack"],
     metrics: { satisfaction: "+85%", efficiency: "+35%", errors: "-70%" },
     link: "https://curatelearn.com/",
@@ -84,7 +81,6 @@ export function ProjectsSection() {
                 >
                   <ExternalLink className="w-4 h-4" />
                 </motion.a>
-                
               </div>
             </div>
           </div>

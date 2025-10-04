@@ -1,12 +1,12 @@
 "use client";
 import { Sans } from "@/app/fonts";
-import { useScroll, useTransform, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 import { ArrowRight, Download, FileText } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
 const AboutSection: React.FC = () => {
   return (
-    <section className="py-24 px-[4%]">
+    <section id="about" className="py-24 px-[4%]">
       <div className="container mx-auto pt-15 px-4 md:px-8 lg:px-10 text-left">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -43,7 +43,10 @@ const AboutSection: React.FC = () => {
           <p className="text-muted-foreground md:text-lg max-w-3xl">
             I focus on building interfaces that feel smooth and easy to use,
             from custom components and responsive layouts to dashboards and
-            real-time interactions. What makes me different is the way I bridge
+            real-time interactions.{" "}
+          </p>
+           <p className="text-muted-foreground md:text-lg max-w-3xl">
+            What makes me different is the way I bridge
             design and development. I don’t just code what’s given, I think
             through user flows, suggest improvements, and make sure every detail
             adds up to a better experience.{" "}
@@ -55,13 +58,13 @@ const AboutSection: React.FC = () => {
           <div className="flex mt-4  max-sm:flex-col w-full items-center max-sm:gap-3 gap-4 my-3">
             <button className="group max-sm:w-full relative max-sm:py-3 inline-flex shadow-gray-700/40 dark:bg-white dark:text-black shadow-xl py-2 items-center hover:pr-3 delay-75 justify-center rounded-full bg-neutral-950 pl-6 pr-1 transition font-medium text-neutral-50">
               <span className="z-10 pr-2">Let's Build Together</span>
-              <div className="flex items-center justify-center h-7 w-7 -rotate-45  group-hover:translate-x-2 duration-200 group-hover:rotate-0 rounded-full bg-white dark:bg-black transition-all">
+              <div className="flex items-center justify-center max-sm:absolute max-sm:right-1 max-sm:group-hover:right-3 h-7 w-7 -rotate-45  group-hover:translate-x-2 duration-200 group-hover:rotate-0 rounded-full bg-white dark:bg-black transition-all">
                 <ArrowRight className="h-5 w-5 text-neutral-800 dark:text-neutral-50" />
               </div>
             </button>
             <button className="group relative max-sm:w-full max-sm:py-3 inline-flex py-2 shadow-[#713cbc]/40 shadow-xl items-center hover:pr-3 delay-75 justify-center rounded-full bg-primary pl-6 pr-1 transition font-medium text-neutral-50">
               <span className="z-10 pr-2">Download CV</span>
-              <div className="flex items-center justify-center h-7 w-7  group-hover:translate-x-2 transition-all duration-200 rounded-full bg-white ">
+              <div className="flex items-center justify-center h-7 w-7 max-sm:absolute max-sm:right-1 max-sm:group-hover:right-3  group-hover:translate-x-2 transition-all duration-200 rounded-full bg-white ">
                 <FileText className="h-5 w-5 text-neutral-800 group-hover:hidden transition-all duration-200" />
                 <Download className="h-5 w-5 text-neutral-800 hidden group-hover:block transition-all duration-200" />
               </div>

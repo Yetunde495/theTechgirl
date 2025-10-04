@@ -29,7 +29,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div className="w-full md:px-10" ref={containerRef}>
-      <div className="max-w-7xl mx-auto pt-15 px-4 md:px-8 lg:px-10 text-left">
+      <div className="container mx-auto pt-15 text-left">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -52,7 +52,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         </p>
       </div>
 
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      
+
+      <div ref={ref} className="relative container mx-auto pb-20">
         {data.map((item, index) => (
           <div
             key={index}

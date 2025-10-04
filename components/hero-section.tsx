@@ -4,6 +4,7 @@ import { ContainerTextFlip } from "./ui/container-text-flip";
 import { Sans } from "@/app/fonts";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Hero() {
   const words = ["Expert", "Developer", "Engineer"];
@@ -50,17 +51,15 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 1.2 }}
       >
-        <Button variant="primary" icon={<ArrowRight className="h-4 w-4" />}>
-          View Projects
-          {/* <Link href="#projects">
-                  
-                  
-                </Link> */}
-        </Button>
-        <Button variant="secondary">
-          Contact Me
-          {/* <Link href="#contact"></Link> */}
-        </Button>
+        <Link href="#projects">
+          <Button variant="primary" icon={<ArrowRight className="h-4 w-4" />}>
+            View Projects
+          </Button>
+        </Link>
+        <Link href="#contact">
+          {" "}
+          <Button variant="secondary">Contact Me</Button>
+        </Link>
       </motion.div>
     </div>
   );

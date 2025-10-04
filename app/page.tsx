@@ -3,12 +3,12 @@ import { BentoGrid } from "@/components/bento-grid";
 import { ProjectsSection } from "@/components/projects-section";
 import { Process } from "@/components/process-timeline";
 import { ValueProposition } from "@/components/value-proposition";
-import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 import Hero from "@/components/hero-section";
 import Image from "next/image";
 import { Github, Linkedin, Mail, MousePointerClickIcon } from "lucide-react";
 import AboutSection from "@/components/about-section";
+import ContactSection from "@/components/contact-section";
 
 export default function Home() {
   return (
@@ -54,7 +54,7 @@ export default function Home() {
         <AboutSection />
         {/* <ToolsSection /> */}
         <ValueProposition />
-        <CTASection />
+        <ContactSection />
       </main>
       <Footer />
     </>
