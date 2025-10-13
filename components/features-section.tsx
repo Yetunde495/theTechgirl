@@ -105,14 +105,14 @@ export const FeaturesSection = () => {
       </div>
 
       {/* Main Features Grid - Mirrors the 5-card layout */}
-      <div className="mt-8 grid grid-cols-1 gap-x-1.5 gap-y-4 md:grid-cols-3 rounded-2xl bg-gray-100 p-2">
+      <div className="mt-8 grid grid-cols-1 gap-x-1.5 gap-y-4 md:grid-cols-3 rounded-2xl bg-gray-100 dark:bg-purple-950/30 p-2">
         {/* Card 1: Detailed Feature with Icon (High-Performance Architecture) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           whileHover={{ scale: 1.02 }}
-          className="bg-white dark:bg-black/40 rounded-2xl py-4 max-sm:pb-1 px-5 relative overflow-hidden"
+          className="bg-white dark-glass rounded-2xl py-4 max-sm:pb-1 px-5 relative overflow-hidden"
         >
           <h3 className="mt-4 text-xl z-10 font-semibold text-black">
             Built for Performance and Growth
@@ -141,12 +141,12 @@ export const FeaturesSection = () => {
           whileHover={{ scale: 1.02 }}
           className=""
         >
-          <div className="bg-white dark:bg-black/40 rounded-2xl py-4 px-5 mb-2 relative overflow-hidden">
+          <div className="bg-white dark-glass rounded-2xl py-4 px-5 mb-2 relative overflow-hidden">
             <p className="text-xl font-semibold ">
               Products that Users Love and Trust
             </p>
           </div>
-          <div className="bg-white dark:bg-black/40 rounded-2xl py-4 px-5 relative overflow-hidden">
+          <div className="bg-white dark-glass rounded-2xl py-4 px-5 relative overflow-hidden">
             <p className="text-6xl font-bold text-black">100%</p>
             <h3 className="mt-2 text-xl font-semibold text-black">
               Flawless and Protected User Experience
@@ -166,7 +166,7 @@ export const FeaturesSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           whileHover={{ scale: 1.02 }}
-          className="bg-white rounded-2xl py-4 px-5 relative overflow-hidden"
+          className="bg-white dark-glass rounded-2xl py-4 px-5 relative overflow-hidden"
         >
           <h3 className="text-xl mt-4 font-semibold text-[#713cbc]">
             Smart & Reliable Design System
@@ -189,7 +189,7 @@ export const FeaturesSection = () => {
       </div>
 
       {/* Bottom Row - Adapted to match image */}
-      <div className="mt-4 flex flex-col md:flex-row items-center justify-between bg-white rounded-md p-6 shadow-sm space-y-4 md:space-y-0 md:space-x-4">
+      <div className="mt-4 flex flex-col md:flex-row items-center justify-between bg-white dark:bg-purple-950/30 rounded-md p-6 shadow-sm space-y-4 md:space-y-0 md:space-x-4">
         <button className="bg-primary text-white rounded-full px-4 py-2 flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"

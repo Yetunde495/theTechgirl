@@ -194,6 +194,9 @@
 .glass {
   @apply bg-black/5 text-primary dark:bg-white/5 backdrop-blur-lg border border-white/20 dark:border-white/10;
 }
+.dark-glass {
+  @apply dark:bg-white/5 dark:backdrop-blur-lg dark:border dark:border-white/10
+}
 
 .glow {
   @apply shadow-2xl shadow-purple-500/25;
