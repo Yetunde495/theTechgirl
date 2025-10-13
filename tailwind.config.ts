@@ -18,12 +18,24 @@ const config: Config = {
         'hero-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         'purple-gradient': 'linear-gradient(135deg, #9333ea 0%, #7c3aed 25%, #6366f1 50%, #8b5cf6 75%, #a855f7 100%)',
       },
+      keyframes: {
+        "canopy-x": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "canopy-y": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
       animation: {
         'float': 'float 6s ease-in-out infinite',
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'gradient-x': 'gradient-x 15s ease infinite',
         'gradient-y': 'gradient-y 15s ease infinite',
         'gradient-xy': 'gradient-xy 15s ease infinite',
+         "canopy-horizontal": "canopy-x var(--duration) infinite linear",
+        "canopy-vertical": "canopy-y var(--duration) linear infinite",
       },
       borderRadius: {
         lg: 'var(--radius)',

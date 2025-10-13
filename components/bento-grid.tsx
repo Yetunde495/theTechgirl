@@ -92,13 +92,7 @@ export function BentoGrid() {
               <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-3xl`} />
               
               <div className="relative z-10">
-                <motion.div
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                  className={`inline-flex p-4 rounded-2xl bg-gradient-to-br ${item.gradient} mb-6`}
-                >
-                  <item.icon className="w-6 h-6 text-white" />
-                </motion.div>
+                
 
                 <h3 className="font-playfair text-2xl font-bold mb-4 group-hover:text-purple-400 transition-colors duration-300">
                   {item.title}

@@ -2,6 +2,7 @@
 import { createContext, useContext, useEffect, useRef } from "react";
 import {
   ArrowUpLeftSquareIcon,
+  FileText,
   Github,
   Linkedin,
   Loader,
@@ -10,6 +11,7 @@ import {
   MessageSquareCode,
   MousePointerClickIcon,
   Star,
+  Twitter,
   User,
   Waves,
 } from "lucide-react";
@@ -172,7 +174,7 @@ export function AnimatedProfile() {
   const { state: blobState, setSize } = useDynamicIslandSize();
   const containerRef = useRef<HTMLDivElement | null>(null);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
-  const blobStates: SizePresets[] = ["compact", "medium"];
+  const blobStates: SizePresets[] = ["compact", "large", "medium"];
   const cycleBlobStates = () => {
     const currentIndex = blobStates.indexOf(blobState.size);
     const nextIndex = (currentIndex + 1) % blobStates.length;
@@ -214,6 +216,7 @@ export function AnimatedProfile() {
   }, [blobState.size]);
   useScheduledAnimations([
     { size: "compact", delay: 1200 },
+    { size: "large", delay: 1600 },
     { size: "medium", delay: 2200 },
   ]);
   // Provide dynamic detail in such a beautiful small place :)
@@ -374,6 +377,8 @@ That’s the value I bring to every project I work on.*/}
         return renderCompactState();
       case "medium":
         return renderMediumState();
+      case "large":
+        return renderLargeState();
       // Optionally add cases for other states as necessary
       default:
         return renderOtherStates();
@@ -401,15 +406,16 @@ That’s the value I bring to every project I work on.*/}
           disabled={blobState.isAnimating}
           className=" dark:text-white hover:scale-105 duration-150 rounded-md flex justify-center items-center "
         >
-          <Mail className="" />
+          <Twitter className="" />
         </button>
+        
 
         <button
           onClick={cycleBlobStates}
           disabled={blobState.isAnimating}
           className=" bg-[#713cbc] text-white p-2 border dark:border-none rounded-md flex justify-center items-center gap-2 max-w-[200px] "
         >
-          <MousePointerClickIcon className="h-5 w-5 scale-x-[-1]" />
+          <Mail className="h-5 w-5" />
         </button>
       </div>
 

@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import { FlowingLogos } from "./ui/flowing-logo";
+import { NextLogo, ReactLogo, Typescript } from "./ui/logos";
 
 const ToolsSection: React.FC = () => {
   const highlights = [
@@ -118,5 +120,28 @@ const ToolsSection: React.FC = () => {
     </section>
   );
 };
+
+
+export function FlowingLogosDemo() {
+  return (
+    <FlowingLogos
+      data={[
+        { image: "", name: "Next.js", svg: NextLogo  },
+        { image: "", name: "React", svg: ReactLogo },
+        { image: "/images/tools/framer.png", name: "Framer" },
+        { image: "", name: "Typescript", svg: Typescript },
+        { image: "https://logo.clearbit.com/samsung.com", name: "Samsung" },
+        {
+          image:
+            "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+          name: "GitHub",
+        },
+        { image: "https://logo.clearbit.com/slack.com", name: "Slack" },
+        { image: "https://logo.clearbit.com/stripe.com", name: "Stripe" },
+      ]}
+    />
+  );
+}
+
 
 export default ToolsSection;
