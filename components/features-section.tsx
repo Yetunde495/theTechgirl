@@ -105,7 +105,7 @@ export const FeaturesSection = () => {
       </div>
 
       {/* Main Features Grid - Mirrors the 5-card layout */}
-      <div className="mt-8 grid grid-cols-1 gap-x-1.5 gap-y-4 md:grid-cols-3 rounded-2xl bg-gray-100 dark:bg-purple-950/30 p-2">
+      <div className="mt-8 grid grid-cols-1 gap-x-1.5 gap-y-4 md:grid-cols-3 rounded-2xl bg-gray-100 dark:bg-gray-900/70 p-2">
         {/* Card 1: Detailed Feature with Icon (High-Performance Architecture) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -147,11 +147,11 @@ export const FeaturesSection = () => {
             </p>
           </div>
           <div className="bg-white dark-glass rounded-2xl py-4 px-5 relative overflow-hidden">
-            <p className="text-6xl font-bold text-black">100%</p>
-            <h3 className="mt-2 text-xl font-semibold text-black">
+            <p className="text-6xl font-bold text-black dark:text-[#713cbc]">100%</p>
+            <h3 className="mt-2 text-xl font-semibold text-black dark:text-white">
               Flawless and Protected User Experience
             </h3>
-            <p className="mt-2 max-sm:text-sm text-gray-600">
+            <p className="mt-2 max-sm:text-sm text-muted-foreground">
               From data validation to secure user sessions, I design every layer
               of your product to protect data, prevent breaches, and maintain
               reliability. Users can share sensitive information securely
@@ -189,7 +189,7 @@ export const FeaturesSection = () => {
       </div>
 
       {/* Bottom Row - Adapted to match image */}
-      <div className="mt-4 flex flex-col md:flex-row items-center justify-between bg-white dark:bg-purple-950/30 rounded-md p-6 shadow-sm space-y-4 md:space-y-0 md:space-x-4">
+      <div className="mt-4 flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900/70 rounded-md p-6 shadow-sm space-y-4 md:space-y-0 md:space-x-4">
         <button className="bg-primary text-white rounded-full px-4 py-2 flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
