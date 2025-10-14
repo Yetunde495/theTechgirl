@@ -1,81 +1,11 @@
 "use client";
-import { BellIcon, CalendarIcon, FileTextIcon, Share2Icon } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { BentoCard, BentoGrid } from "./ui/bento-grid";
-import { AnimatedListDemo } from "./ui/animated-toasts";
-import { AnimatedBeamMultipleOutputDemo } from "./ui/animated-beam";
-import { ChatDemoCard } from "./ui/chat-demo";
 import { motion } from "framer-motion";
 import { LogoCarousel } from "./ui/logo-carousel";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { Sans } from "@/app/fonts";
 
-const features = [
-  {
-    Icon: FileTextIcon,
-    name: "Smart, Scalable Architecture",
-    description:
-      "I don’t just write code, I design systems. Clean folder structures, modular patterns, custom reusable components, and future-ready setups that scale with your product.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <div className="border-none h-full w-full  transition-all duration-300 ease-out group-hover:scale-90">
-        <img
-          src="/images/features/performance.png"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-        {/* <AnimatedListDemo className="absolute top-4 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90" /> */}
-      </div>
-    ),
-  },
-  {
-    Icon: BellIcon,
-    name: "Performance & Reliability",
-    description:
-      "Code-splitting, lazy loading, caching, and smart bundling that make apps light, quick, and stable even under heavy use.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
-    background: (
-      <div className="border-none min-h-[300px]  transition-all duration-300 ease-out group-hover:scale-90">
-        {/* <AnimatedListDemo className="absolute top-4 right-2 h-[300px] w-full scale-75 border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-90" /> */}
-      </div>
-    ),
-  },
-  {
-    Icon: CalendarIcon,
-    name: "Calendar",
-    description: "Use the calendar to filter your files by date.",
-    className: "col-span-3 lg:col-span-2",
-    href: "#",
-    cta: "Learn more",
-    background: <ChatDemoCard />,
-  },
-  {
-    Icon: Share2Icon,
-    name: "Integrations",
-    description: "Supports 100+ integrations and counting.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-1",
-    background: (
-      <AnimatedBeamMultipleOutputDemo className="absolute top-4 right-2 h-[300px] border-none [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] transition-all duration-300 ease-out group-hover:scale-105" />
-    ),
-  },
-];
-export function BentoDemo() {
-  return (
-    <div className="container mx-auto px-4 py-[7%] h-full">
-      <BentoGrid>
-        {features.map((feature, idx) => (
-          <BentoCard key={idx} {...feature} />
-        ))}
-      </BentoGrid>
-    </div>
-  );
-}
+
+
 
 export const FeaturesSection = () => {
   return (
@@ -114,7 +44,7 @@ export const FeaturesSection = () => {
           whileHover={{ scale: 1.02 }}
           className="bg-white dark-glass rounded-2xl py-4 max-sm:pb-1 px-5 relative overflow-hidden"
         >
-          <h3 className="mt-4 text-xl z-10 font-semibold text-black">
+          <h3 className="mt-4 text-xl z-10 font-semibold text-black dark:text-white">
             Built for Performance and Growth
           </h3>
           <p className="mt-2 max-sm:text-sm text-muted-foreground">
@@ -168,7 +98,7 @@ export const FeaturesSection = () => {
           whileHover={{ scale: 1.02 }}
           className="bg-white dark-glass rounded-2xl py-4 px-5 relative overflow-hidden"
         >
-          <h3 className="text-xl mt-4 font-semibold text-[#713cbc]">
+          <h3 className="mt-4 text-xl z-10 font-semibold text-black dark:text-white">
             Smart & Reliable Design System
           </h3>
           <p className="mt-2 max-sm:text-sm text-muted-foreground">
@@ -186,10 +116,8 @@ export const FeaturesSection = () => {
             />
           </div>
         </motion.div>
-      </div>
-
-      {/* Bottom Row - Adapted to match image */}
-      <div className="mt-4 flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900/70 rounded-md p-6 shadow-sm space-y-4 md:space-y-0 md:space-x-4">
+        {/* Bottom Row - Adapted to match image */}
+      <div className="mt-4  md:col-span-3 flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900/70 rounded-md p-6 shadow-sm space-y-4 md:space-y-0 md:space-x-4">
         <button className="bg-primary text-white rounded-full px-4 py-2 flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -223,6 +151,9 @@ export const FeaturesSection = () => {
           </div>
         </div>
       </div>
+      </div>
+
+      
     </section>
   );
 };

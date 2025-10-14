@@ -156,7 +156,7 @@ function LogoCarousel({ columnCount = 4 }: { columnCount?: number }) {
   }, [updateTime]);
   // Render the logo columns
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-4 w-full">
       {logoSets.map((logos, index) => (
         <LogoColumn
           key={index}

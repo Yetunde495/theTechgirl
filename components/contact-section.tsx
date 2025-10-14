@@ -10,7 +10,7 @@ import TextArea from "./formUI/TextArea";
 import { Button } from "./ui/button";
 import { DynamicIslandProvider } from "./ui/dynamic-island";
 import { AnimatedProfile } from "./animated-card";
-import InputSelect from "./formUI/input-with-select";
+// import InputSelect from "./formUI/input-with-select";
 
 export const schema = z.object({
   name: z.string().min(3, "Your name is required"),
@@ -82,16 +82,7 @@ const ContactSection: React.FC = () => {
           I create seamless solutions that help your ideas work for both users
           and businesses.{" "}
         </p>
-        {/* <div>
-                <div className="">
-                  <DotLottieReact
-                    src="https://lottie.host/95f83961-5916-46d8-a611-5a6d3371877c/Wkron6xWQV.lottie"
-                    loop
-                    autoplay
-                    className="h-full  w-full "
-                  />
-                </div>
-              </div> */}
+      
       </div>
       <div className="w-full h-full grid lg:grid-cols-2 gap-9 place-items-center grid-cols-1  py-[5%] px-[3%]">
         <div className="w-full">
@@ -116,7 +107,7 @@ const ContactSection: React.FC = () => {
                       error={errors.email?.message}
                       fullWidth
                     />
-                    <InputSelect
+                    {/* <InputSelect
                       label="Amount"
                       placeholder="Enter amount"
                       type="number"
@@ -132,7 +123,7 @@ const ContactSection: React.FC = () => {
                         { value: "$", label: "USD $" },
                         { value: "₦", label: "NGN ₦" },
                       ]}
-                    />
+                    /> */}
                   </div>
 
                   <div className="col-span-2">
