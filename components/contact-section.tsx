@@ -166,7 +166,7 @@ const ContactSection: React.FC = () => {
             </div>
           </form>
         </div>
-        <div>
+        <div className="w-full flex justify-center items-center">
           <DynamicIslandProvider initialSize={"default"}>
             <div>
               <AnimatedProfile />
