@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
         <h2
           className={`text-3xl md:text-5xl ${Sans.className} font-semibold mb-3 max-w-[650px]`}
         >
-          Frontend Expert, Technical Writer, & Occasional Poet.
+          Frontend Expert, Technical Writer, & Foodie.
         </h2>
       </div>
       <div className="relative container mx-auto grid pt-[7%] px-[4%] md:px-8 lg:px-10 lg:grid-cols-2 grid-cols-1 gap-10 place-items-center">
@@ -64,6 +64,7 @@ const AboutSection: React.FC = () => {
               </div>
             </button>
             </a>
+            <div className="w-full">
             <button className="group relative max-sm:w-full max-sm:py-3 inline-flex py-2 shadow-[#713cbc]/40 shadow-xl items-center hover:pr-3 delay-75 justify-center rounded-full bg-primary pl-6 pr-1 transition font-medium text-neutral-50">
               <span className="z-10 pr-2">Download CV</span>
               <div className="flex items-center justify-center h-7 w-7 max-sm:absolute max-sm:right-1 max-sm:group-hover:right-3  group-hover:translate-x-2 transition-all duration-200 rounded-full bg-white ">
@@ -71,6 +72,7 @@ const AboutSection: React.FC = () => {
                 <Download className="h-5 w-5 text-neutral-800 hidden group-hover:block transition-all duration-200" />
               </div>
             </button>
+            </div>
           </div>
         </div>
       </div>

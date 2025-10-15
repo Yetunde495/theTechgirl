@@ -33,14 +33,14 @@ export const FeaturesSection = () => {
       </div>
 
       {/* Main Features Grid - Mirrors the 5-card layout */}
-      <div className="mt-8 grid grid-cols-1 gap-x-1.5 gap-y-4 md:grid-cols-3 rounded-2xl bg-gray-100 dark:bg-gray-900/70 p-2">
+      <div className="mt-8 grid grid-cols-1 w-full h-full gap-x-1.5 gap-y-1.5 max-sm:gap-y-4 md:grid-cols-3 rounded-2xl bg-gray-100 dark:bg-gray-900/70 p-2">
         {/* Card 1: Detailed Feature with Icon (High-Performance Architecture) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           whileHover={{ scale: 1.02 }}
-          className="bg-white dark-glass row-span-2 rounded-2xl py-4 max-sm:pb-1 px-5 relative overflow-hidden"
+          className="bg-white dark-glass dark:bg-none bg-gradient-to-b from-white via-white to-[#713cbc41] bg-cover bg-center bg-no-repeat row-span-2 rounded-2xl py-4 max-sm:pb-1 px-5 relative overflow-hidden"
         >
           <h3 className="mt-4 text-xl z-10 font-semibold text-black dark:text-white">
             Built for Performance and Growth
@@ -50,7 +50,21 @@ export const FeaturesSection = () => {
             consistent even as your users grow — helping you keep performance
             high and downtime low.{" "}
           </p>
-          <div className=" w-full">
+
+          <div className="pt-12">
+             <CountUp
+              from={0}
+              to={10}
+              separator=","
+              direction="up"
+              duration={1}
+              text="X"
+              className="text-6xl font-bold text-[#713cbc]"
+            />
+            <p className="text-lg font-semibold text-black dark:text-white">Faster loads. Smoother runs. Happier users.</p>
+           
+          </div>
+          <div className="w-full">
             <DotLottieReact
               src="https://lottie.host/7a1f10e2-2fbd-4339-872e-e7ae78a39410/tyEt8EE9Sg.lottie"
               loop
@@ -61,20 +75,20 @@ export const FeaturesSection = () => {
           </div>
         </motion.div>
 
-        {/* Card 4: Big Stat Feature (User-Centered Engineering & Integration) */}
+        {/* Card 2: Big Stat Feature (User-Centered Engineering & Integration) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           whileHover={{ scale: 1.02 }}
-          className=""
+          className="h-full flex flex-col relative"
         >
-          <div className="bg-white dark-glass rounded-2xl py-4 px-5 mb-2 relative overflow-hidden">
+          <div className="bg-white dark-glass rounded-2xl h-full py-2.5 px-5 mb-1.5">
             <p className="text-lg font-semibold ">
-              Products that are beyond designs and code
+              For me, frontend is more than visuals
             </p>
           </div>
-          <div className="bg-white dark-glass rounded-2xl py-4 px-5 relative overflow-hidden">
+          <div className="bg-white dark-glass  min-h-[82.4%] rounded-2xl py-4 px-5 h-full">
             <CountUp
               from={20}
               to={100}
@@ -123,10 +137,7 @@ export const FeaturesSection = () => {
             />
           </div>
         </motion.div>
-        {/* <div></div> */}
-        {/* Bottom Row - Adapted to match image */}
-        <div 
-        
+        <div    
         className="md:col-span-2 flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900/70 rounded-2xl p-6 space-y-4 md:space-y-0 md:space-x-4">
        
 
