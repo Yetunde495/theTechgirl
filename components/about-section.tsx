@@ -19,9 +19,9 @@ const AboutSection: React.FC = () => {
           About Me
         </motion.div>
         <h2
-          className={`text-3xl md:text-5xl ${Sans.className} font-semibold mb-3 max-w-3xl`}
+          className={`text-3xl md:text-5xl ${Sans.className} font-semibold mb-3 max-w-[650px]`}
         >
-          I build products users actually enjoy using
+          Frontend Expert, Technical Writer, & Occasional Poet.
         </h2>
       </div>
       <div className="relative container mx-auto grid pt-[7%] md:px-8 lg:px-10 lg:grid-cols-2 grid-cols-1 gap-10 place-items-center">

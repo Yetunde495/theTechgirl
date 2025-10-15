@@ -2,13 +2,11 @@
 import { createContext, useContext, useEffect, useRef } from "react";
 import {
   ArrowUpLeftSquareIcon,
-  FileText,
   Github,
   Linkedin,
   Loader,
   Mail,
   MessageCircle,
-  MessageSquareCode,
   MousePointerClickIcon,
   Star,
   Twitter,
@@ -27,8 +25,6 @@ import {
   useScheduledAnimations,
 } from "@/components/ui/dynamic-island";
 import { Glass, InterFont } from "@/app/fonts";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import { Inter } from "next/font/google";
 
 export const DynamicAction = () => {
   const { state: blobState, setSize } = useDynamicIslandSize();
@@ -259,31 +255,7 @@ export function AnimatedProfile() {
       </div>
     </DynamicContainer>
   );
-  // Great for user onboarding, forms, etc
-  const renderTallState = () => (
-    <DynamicContainer className="  flex flex-col mt-6 w-full items-start  gap-1 px-6 font-semibold">
-      <DynamicDescription className="bg-white text-left rounded-2xl tracking-tight leading-5  p-2">
-        translating ideas into functional & user-friendly apps.
-      </DynamicDescription>
-      {/* <DynamicDescription className="bg-black text-white font-medium rounded-2xl tracking-tight leading-5  p-2 text-left">
-        it's about seamless solutions that carry design intent, user flow, and
-        technical strength together.
-      </DynamicDescription> */}
-      <DynamicDiv>
-        <div className="">
-          <DotLottieReact
-            src="https://lottie.host/95f83961-5916-46d8-a611-5a6d3371877c/Wkron6xWQV.lottie"
-            loop
-            autoplay
-            className="h-full  w-full "
-          />
-        </div>
-      </DynamicDiv>
-      {/* <DynamicTitle className=" text-4xl font-black tracking-tighter text-cyan-100 ">
-        awesome right?
-      </DynamicTitle> */}
-    </DynamicContainer>
-  );
+ 
 
   const renderMediumState = () => (
     <DynamicContainer className="flex flex-col justify-between p-4 bg-[#713cbc] rounded-[28px] text-left text-white h-full">

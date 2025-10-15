@@ -15,8 +15,8 @@ export default function Home() {
     <>
       <main className="">
         <Navigation />
-        <div className="hero-section">
-          <div className="container mx-auto px-4 py-[7%] gap-y-16 gap-x-5 flex max-lg:flex-col justify-center items-center h-full min-h-[98vh]">
+        <div className="py-[7%]  h-full min-h-[98vh]">
+          <div className=" px-4 container mx-auto  gap-y-16 gap-x-5 flex max-lg:flex-col justify-center items-center ">
             <div className="w-full lg:max-w-3xl max-sm:mt-[90px] max-lg:mt-[7%]">
               <Hero />
             </div>
@@ -45,15 +45,12 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <FlowingLogosDemo />
         </div>
-
         <FeaturesSection />
         <ProjectsSection />
         <Process />
         <AboutSection />
-
         <ContactSection />
       </main>
       <Footer />

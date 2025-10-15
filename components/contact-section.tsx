@@ -10,13 +10,12 @@ import TextArea from "./formUI/TextArea";
 import { Button } from "./ui/button";
 import { DynamicIslandProvider } from "./ui/dynamic-island";
 import { AnimatedProfile } from "./animated-card";
-// import InputSelect from "./formUI/input-with-select";
 
 export const schema = z.object({
   name: z.string().min(3, "Your name is required"),
   email: z.string().min(6, "Email is Required"),
   message: z.string().min(10, "This field is required"),
-  budget: z.string().optional()
+  budget: z.string().optional(),
 });
 
 export type feedbackData = {
@@ -27,14 +26,13 @@ export type feedbackData = {
 };
 const ContactSection: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [result, setResult] = useState<"success" | "failure" | "initial">(
+  const [_result, setResult] = useState<"success" | "failure" | "initial">(
     "initial"
   );
 
   const {
     register,
     handleSubmit,
-    setValue,
     reset,
     formState: { errors },
   } = useForm<feedbackData>({
@@ -82,7 +80,6 @@ const ContactSection: React.FC = () => {
           I create seamless solutions that help your ideas work for both users
           and businesses.{" "}
         </p>
-      
       </div>
       <div className="w-full h-full grid lg:grid-cols-2 gap-9 place-items-center grid-cols-1  py-[5%] px-[3%]">
         <div className="w-full">

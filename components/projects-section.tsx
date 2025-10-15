@@ -177,7 +177,7 @@ export function ProjectsSection() {
           Case Studies
         </motion.div>
         <h2
-          className={`text-3xl md:text-5xl ${Sans.className} font-semibold mb-3`}
+          className={`text-3xl max-w-[600px] md:text-5xl ${Sans.className} font-semibold mb-3`}
         >
           Projects that show what I do best
         </h2>

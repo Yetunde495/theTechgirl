@@ -306,7 +306,7 @@ const calculateDimensions = (
   currentSize: Preset
 ): { width: string; height: number } => {
   const isMassiveOnMobile = size === "massive" && screenSize === "mobile"
-    const isMediumOnMobile = size === "massive" && screenSize === "mobile"
+    const isMediumOnMobile = size === "medium" && screenSize === "mobile"
   const isUltraOnMobile = size === "ultra" && screenSize === "mobile"
   if (isMassiveOnMobile) {
     return { width: "350px", height: MAX_HEIGHT_MOBILE_MASSIVE }
@@ -315,7 +315,7 @@ const calculateDimensions = (
     return { width: "350px", height: MAX_HEIGHT_MOBILE_ULTRA }
   }
   if (isMediumOnMobile) {
-    return { width: "350px", height: currentSize?.height || 400 }
+    return { width: "340px", height: currentSize?.height || 400 }
   }
 
   const width = min(currentSize.width, MIN_WIDTH)
