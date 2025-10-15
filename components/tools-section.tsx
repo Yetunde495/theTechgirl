@@ -4,17 +4,7 @@ import { FlowingLogos } from "./ui/flowing-logo";
 import { NextLogo, ReactLogo, Typescript } from "./ui/logos";
 
 const ToolsSection: React.FC = () => {
-  const highlights = [
-    { icon: "/images/tools/next-js.png", style: "w-full max-w-[80px] h-full" },
-    { icon: "/images/tools/react.png", style: "w-full max-w-[50px] h-full" },
-    { icon: "/images/tools/framer.png", style: "w-full max-w-[150px] h-full" },
-    {
-      icon: "/images/tools/tailwind.png",
-      style: "w-full max-w-[150px] h-full",
-    },
-    { icon: "/images/tools/git.png", style: "w-full max-w-[70px] h-full" },
-    { icon: "/images/tools/ts.png", style: "w-full max-w-[30px] h-full" },
-  ];
+
 
   type TechLogo = {
     name: string;

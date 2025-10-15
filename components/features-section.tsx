@@ -26,8 +26,8 @@ export const FeaturesSection = () => {
           You get products that users love
         </h2>
         <p className="text-muted-foreground text-lg max-w-3xl">
-          I build with people in mind — clear design, quick performance, and
-          seamless flow. I focus on the details that make your platform feel
+          I build with people in mind; clear design, quick performance, and
+          seamless flow. I focus on the details that makes your platform feel
           effortless and keep users coming back.{" "}
         </p>
       </div>
@@ -128,34 +128,17 @@ export const FeaturesSection = () => {
         <div 
         
         className="md:col-span-2 flex flex-col md:flex-row items-center justify-between bg-white dark:bg-gray-900/70 rounded-2xl p-6 space-y-4 md:space-y-0 md:space-x-4">
-          <button className="bg-primary text-white rounded-full px-4 py-2 flex items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="white"
-              className="w-4 h-4 mr-2"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-              />
-            </svg>
-            C
-          </button>
+       
 
-          <div className="w-3 h-3 bg-red-500 rounded-full" />
           <div>
-            <h3 className="text-xl font-semibold text-black">
-              Quick Access Tools
+            <h3 className="text-xl font-semibold text-black dark:text-white">
+              Transparent. Timely. True to the Plan
             </h3>
-            <p className="mt-1 text-sm text-gray-600">
-              Faster, easier ways to integrate and customize features.
+            <p className="mt-1 max-sm:text-sm text-muted-foreground">
+              I plan carefully, communicate openly, and deliver on time. Every milestone is clear, every update is shared, and I make sure your project wraps up right on schedule.
             </p>
           </div>
-          <div className="">
+          <div className="w-full">
             <button className="group max-sm:w-full relative max-sm:py-3 inline-flex shadow-gray-700/40 dark:bg-white dark:text-black shadow-xl py-2 items-center hover:pr-3 delay-75 justify-center rounded-full bg-neutral-950 pl-6 pr-1 transition font-medium text-neutral-50">
               <span className="z-10 pr-2">Let's Build Together</span>
               <div className="flex items-center justify-center max-sm:absolute max-sm:right-1 max-sm:group-hover:right-3 h-7 w-7 -rotate-45  group-hover:translate-x-2 duration-200 group-hover:rotate-0 rounded-full bg-white dark:bg-black transition-all">

@@ -6,7 +6,7 @@ import React from "react";
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-24 px-[4%]">
+    <section id="about" className="py-24">
       <div className="container mx-auto pt-15 px-4 md:px-8 lg:px-10 text-left">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -24,7 +24,7 @@ const AboutSection: React.FC = () => {
           Frontend Expert, Technical Writer, & Occasional Poet.
         </h2>
       </div>
-      <div className="relative container mx-auto grid pt-[7%] md:px-8 lg:px-10 lg:grid-cols-2 grid-cols-1 gap-10 place-items-center">
+      <div className="relative container mx-auto grid pt-[7%] px-[4%] md:px-8 lg:px-10 lg:grid-cols-2 grid-cols-1 gap-10 place-items-center">
         <div className="h-full w-full rounded-[32px] ">
           <img
             src="/images/about.jpg"
@@ -34,7 +34,7 @@ const AboutSection: React.FC = () => {
         </div>
         <div className="flex flex-col gap-3">
           <p className="text-muted-foreground md:text-lg max-w-3xl">
-            I’m Yetunde, a frontend engineer with over 3 years of experience
+            I’m Yetunde, a frontend engineer with over 3 years of experience in
             turning ideas into clean, interactive websites. My journey started
             with a curiosity for how design meets code, and over the years I’ve
             worked on platforms for learning, productivity, health, and
@@ -56,12 +56,14 @@ const AboutSection: React.FC = () => {
             frontend tips, and exploring culture through food and animes.{" "}
           </p>
           <div className="flex mt-4  max-sm:flex-col w-full items-center max-sm:gap-3 gap-4 my-3">
+            <a href="#contact" className="w-full">
             <button className="group max-sm:w-full relative max-sm:py-3 inline-flex shadow-gray-700/40 dark:bg-white dark:text-black shadow-xl py-2 items-center hover:pr-3 delay-75 justify-center rounded-full bg-neutral-950 pl-6 pr-1 transition font-medium text-neutral-50">
               <span className="z-10 pr-2">Let's Build Together</span>
               <div className="flex items-center justify-center max-sm:absolute max-sm:right-1 max-sm:group-hover:right-3 h-7 w-7 -rotate-45  group-hover:translate-x-2 duration-200 group-hover:rotate-0 rounded-full bg-white dark:bg-black transition-all">
                 <ArrowRight className="h-5 w-5 text-neutral-800 dark:text-neutral-50" />
               </div>
             </button>
+            </a>
             <button className="group relative max-sm:w-full max-sm:py-3 inline-flex py-2 shadow-[#713cbc]/40 shadow-xl items-center hover:pr-3 delay-75 justify-center rounded-full bg-primary pl-6 pr-1 transition font-medium text-neutral-50">
               <span className="z-10 pr-2">Download CV</span>
               <div className="flex items-center justify-center h-7 w-7 max-sm:absolute max-sm:right-1 max-sm:group-hover:right-3  group-hover:translate-x-2 transition-all duration-200 rounded-full bg-white ">

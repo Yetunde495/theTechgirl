@@ -39,7 +39,7 @@ export default function ParallaxCards({ cards }: ParallaxCardsProps) {
         {cards?.map((card, index) => (
           <div
             key={index}
-            className={`sticky top-0 z-[1] min-h-screen   ${index !== cards.length - 1 ? 'pb-[20vh]' : ''}`}
+            className={`sticky top-0 z-[1] overflow-x-hidden min-h-screen   ${index !== cards.length - 1 ? 'pb-[20vh]' : ''}`}
           >
             <div
               className="w-full min-h-screen flex flex-col items-center justify-center 
