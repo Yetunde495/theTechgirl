@@ -51,7 +51,7 @@ export const FeaturesSection = () => {
             high and downtime low.{" "}
           </p>
 
-          <div className="pt-12">
+          <div className="pt-12 max-sm:hidden">
              <CountUp
               from={0}
               to={10}
@@ -81,7 +81,7 @@ export const FeaturesSection = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.5 }}
           whileHover={{ scale: 1.02 }}
-          className="h-full flex flex-col relative"
+          className="h-full flex flex-col max-sm:gap-y-3 relative"
         >
           <div className="bg-white dark-glass rounded-2xl h-full py-2.5 px-5 mb-1.5">
             <p className="text-lg font-semibold ">
