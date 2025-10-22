@@ -181,7 +181,7 @@ export function ProjectsSection() {
         >
           Projects that show what I do best
         </h2>
-        <p className="text-muted-foreground text-lg max-w-3xl">
+        <p className="text-muted-foreground sm:text-lg max-w-3xl">
           Here are some of the products I’ve helped shape; from AI-Powered
           platforms to Edu solutions. Each one taught me something new and shows
           how I build clean, useful, and people-friendly websites.{" "}

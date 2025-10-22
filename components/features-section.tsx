@@ -25,7 +25,7 @@ export const FeaturesSection = () => {
         >
           You get products people enjoy using
         </h2>
-        <p className="text-muted-foreground text-lg max-w-3xl">
+        <p className="text-muted-foreground sm:text-lg max-w-3xl">
           I build with users in mind by focusing on the little details that make
           your platform feel smooth, intuitive, and worth coming back to.{" "}
         </p>
@@ -43,12 +43,11 @@ export const FeaturesSection = () => {
           <div className="flex h-full w-full flex-col justify-between">
             <div>
               <h3 className="mt-4 text-xl z-10 font-semibold text-black dark:text-white">
-                Built for Performance and Growth
+                High Performance & Scalability
               </h3>
               <p className="mt-2 max-sm:text-sm text-muted-foreground">
-                I ensure your products loads quickly, runs smoothly, and stay
-                consistent even as your users grow — helping you keep
-                performance high and downtime low.{" "}
+                
+                I make sure your product loads fast, runs smoothly, and stays reliable, no matter how many users you get.
               </p>
             </div>
             <div className="w-full">
@@ -71,7 +70,7 @@ export const FeaturesSection = () => {
           whileHover={{ scale: 1.02 }}
           className="h-full flex flex-col max-sm:gap-y-3 relative"
         >
-          <div className="bg-white dark-glass rounded-2xl h-full py-2 flex items-center px-5 mb-1.5">
+          <div className="bg-white dark-glass rounded-2xl max-h-[60px] h-full py-2 flex items-center px-5 mb-1.5">
             <p className="text-lg font-medium flex gap-2 items-center">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />{" "}
               For me, frontend is more than visuals
@@ -89,13 +88,11 @@ export const FeaturesSection = () => {
             />
             {/* <p className="text-6xl font-bold text-[#713cbc]">100%</p> */}
             <h3 className="mt-2 text-xl font-semibold text-black dark:text-white">
-              Flawless and Protected User Experience
+              Protected User Experience
             </h3>
             <p className="mt-2 max-sm:text-sm text-muted-foreground">
-              From data validation to secure user sessions, I design every layer
-              of your product to protect data, prevent breaches, and maintain
-              reliability. Users can share sensitive information without
-              worrying about data security.
+              From data validation to secure user sessions, I ensure your users can share sensitive information on your app without
+              worrying about data security & breaches.
             </p>
           </div>
         </motion.div>
@@ -112,7 +109,7 @@ export const FeaturesSection = () => {
             Smart & Reliable Design System
           </h3>
           <p className="mt-2 max-sm:text-sm text-muted-foreground">
-            I build custom & functional components, patterns, and clear
+            I build custom components, patterns, and clear
             standards that match your brand, giving you a clean, unified
             interface that saves time and cost as you expand.
           </p>
@@ -132,7 +129,7 @@ export const FeaturesSection = () => {
               Transparent. Timely. True to the Plan
             </h3> */}
             <p className="mt-1 max-sm:text-sm text-muted-foreground">
-              Every milestone is clear. Every update is shared. Your feedback is
+              Every milestone is clear. Your feedback is
               prioritized, and I make sure your project wraps up right on
               schedule.
             </p>

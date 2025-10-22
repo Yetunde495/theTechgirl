@@ -74,7 +74,7 @@ const ContactSection: React.FC = () => {
         >
           Let's build a product that grows your business.
         </h2>
-        <p className="text-muted-foreground text-lg max-w-3xl">
+        <p className="text-muted-foreground sm:text-lg max-w-3xl">
           A well-built product is not just design and code; it's a soluton that
           attracts users, keep them engaged and turns them into loyal customers.
           I create seamless solutions that help your ideas work for both users
