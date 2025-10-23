@@ -348,6 +348,9 @@ That’s the value I bring to every project I work on.*/}
         return renderOtherStates();
     }
   }
+   const handleMailClick = () => {
+    window.location.href = "mailto:morenikejiy48@gmail.com";
+  };
   return (
     <div ref={containerRef} className="h-full relative  w-full">
       <div className="w-full max-w-[400px] bg-slate-50 dark:bg-[#713cbc] shadow-xl border dark:border-none dark:border-t border-slate-200 flex items-center justify-between gap-1 px-4 py-1.5 rounded-xl mb-3">
@@ -365,18 +368,17 @@ That’s the value I bring to every project I work on.*/}
         >
           <Linkedin className="" />
         </a>
-        <button
-          onClick={cycleBlobStates}
-          disabled={blobState.isAnimating}
+        <a
+          href="https://x.com/morenikeji_48"
+          target="_blank"
           className=" dark:text-white hover:scale-105 duration-150 rounded-md flex justify-center items-center "
         >
           <Twitter className="" />
-        </button>
+        </a>
         
 
         <button
-          onClick={cycleBlobStates}
-          disabled={blobState.isAnimating}
+          onClick={handleMailClick}
           className=" bg-[#713cbc] text-white p-2 border dark:border-none rounded-md flex justify-center items-center gap-2 max-w-[200px] "
         >
           <Mail className="h-5 w-5" />

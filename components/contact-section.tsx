@@ -104,23 +104,7 @@ const ContactSection: React.FC = () => {
                       error={errors.email?.message}
                       fullWidth
                     />
-                    {/* <InputSelect
-                      label="Amount"
-                      placeholder="Enter amount"
-                      type="number"
-                      fullWidth
-                      // register input field
-                      {...register("budget", {
-                        required: "Amount is required",
-                      })}
-                      error={errors.budget?.message}
-                      // register select field separately
-                      // selectRegister={register("currency", { required: true })}
-                      options={[
-                        { value: "$", label: "USD $" },
-                        { value: "₦", label: "NGN ₦" },
-                      ]}
-                    /> */}
+                 
                   </div>
 
                   <div className="col-span-2">
