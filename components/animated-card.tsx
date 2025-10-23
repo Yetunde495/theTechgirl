@@ -236,14 +236,6 @@ export function AnimatedProfile() {
   const renderLargeState = () => (
     <DynamicContainer className="flex justify-center items-center h-full w-full">
       <div className="relative  flex w-full items-center justify-center gap-2">
-        {/* <div className="">
-          <DotLottieReact
-            src="https://lottie.host/95f83961-5916-46d8-a611-5a6d3371877c/Wkron6xWQV.lottie"
-            loop
-            autoplay
-            className="h-full  w-full "
-          />
-        </div> */}
         <DynamicDescription className="my-auto tracking-tighter text-white ">
           <MessageCircle className=" h-7 w-7 fill-white text-[#713cbc]" />
         </DynamicDescription>
@@ -359,20 +351,20 @@ That’s the value I bring to every project I work on.*/}
   return (
     <div ref={containerRef} className="h-full relative  w-full">
       <div className="w-full max-w-[400px] bg-slate-50 dark:bg-[#713cbc] shadow-xl border dark:border-none dark:border-t border-slate-200 flex items-center justify-between gap-1 px-4 py-1.5 rounded-xl mb-3">
-        <button
-          onClick={cycleBlobStates}
-          disabled={blobState.isAnimating}
+        <a
+          href="https://github.com/yetunde495"
+          target="_blank"
           className="hover:scale-105 dark:text-white duration-150 rounded-md flex justify-center items-center "
         >
           <Github className="" />
-        </button>
-        <button
-          onClick={cycleBlobStates}
-          disabled={blobState.isAnimating}
+        </a>
+        <a
+          href="https://linkedin.com/in/yetunde-morenikeji"
+          target="_blank"
           className="hover:scale-105 dark:text-white duration-150  flex justify-center items-center "
         >
           <Linkedin className="" />
-        </button>
+        </a>
         <button
           onClick={cycleBlobStates}
           disabled={blobState.isAnimating}
