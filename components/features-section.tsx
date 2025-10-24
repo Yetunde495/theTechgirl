@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export const FeaturesSection = () => {
   return (
-    <section className="py-24 container mx-auto">
+    <section id="value" className="py-24 container mx-auto">
       {/* Header and Paragraph */}
       <div className=" pt-15 px-4 text-left">
         <motion.div
@@ -47,7 +47,7 @@ export const FeaturesSection = () => {
               </h3>
               <p className="mt-2 max-sm:text-sm text-muted-foreground">
                 
-                I make sure your product loads fast, runs smoothly, and stays reliable, no matter how many users you get.
+                I make sure your products load fast, run smoothly, and stay reliable, no matter how many users you get.
               </p>
             </div>
             <div className="w-full">
@@ -125,9 +125,7 @@ export const FeaturesSection = () => {
         </motion.div>
         <div className="lg:col-span-2 flex flex-col lg:flex-row items-center justify-between bg-white dark:bg-gray-900/70 rounded-2xl p-6 space-y-4 md:space-y-0 md:space-x-4">
           <div className="">
-            {/* <h3 className="text-xl font-semibold text-black dark:text-white">
-              Transparent. Timely. True to the Plan
-            </h3> */}
+           
             <p className="mt-1 max-sm:text-sm text-muted-foreground">
               Every milestone is clear. Your feedback is
               prioritized, and I make sure your project wraps up right on

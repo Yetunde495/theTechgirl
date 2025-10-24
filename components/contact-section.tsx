@@ -1,10 +1,10 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Sans } from "@/app/fonts";
 import Input from "./formUI/Input";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import z from "zod";
 import TextArea from "./formUI/TextArea";
 import { Button } from "./ui/button";
@@ -15,20 +15,19 @@ export const schema = z.object({
   name: z.string().min(3, "Your name is required"),
   email: z.string().min(6, "Email is Required"),
   message: z.string().min(10, "This field is required"),
-  budget: z.string().optional(),
 });
 
 export type feedbackData = {
   name: string;
   email: string;
   message: string;
-  budget?: string;
 };
 const ContactSection: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [_result, setResult] = useState<"success" | "failure" | "initial">(
+  const [result, setResult] = useState<"success" | "failure" | "initial">(
     "initial"
   );
+  const [showModal, setShowModal] = useState(false);
 
   const {
     register,
@@ -43,19 +42,46 @@ const ContactSection: React.FC = () => {
     window.location.href = "mailto:morenikejiy48@gmail.com";
   };
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: feedbackData) => {
     setIsLoading(true);
+    setShowModal(false);
 
     try {
-      // await sendFeedback(data);
-      setResult("success");
-      reset();
-    } catch (err: any) {
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("email", data.email);
+      formData.append("message", data.message);
+
+      const response = await fetch("https://formspree.io/f/xkgqdrez", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (response.ok) {
+        setResult("success");
+        reset();
+      } else {
+        throw new Error("Failed");
+      }
+    } catch (error) {
+      console.error(error);
       setResult("failure");
     } finally {
       setIsLoading(false);
+      setShowModal(true);
     }
   };
+
+  // Auto-close modal after 10 seconds
+  useEffect(() => {
+    if (showModal) {
+      const timer = setTimeout(() => {
+        setShowModal(false);
+      }, 10000);
+      return () => clearTimeout(timer);
+    }
+  }, [showModal]);
   return (
     <section id="contact" className="py-24 container mx-auto">
       <div className=" pt-15 px-4 md:px-8 lg:px-10 text-left">
@@ -75,7 +101,7 @@ const ContactSection: React.FC = () => {
           Let's build a product that grows your business.
         </h2>
         <p className="text-muted-foreground sm:text-lg max-w-3xl">
-          A well-built product is not just design and code; it's a soluton that
+          A well-built product is not just design and code; it's a solution that
           attracts users, keep them engaged and turns them into loyal customers.
           I create seamless solutions that help your ideas work for both users
           and businesses.{" "}
@@ -86,7 +112,7 @@ const ContactSection: React.FC = () => {
           <form onSubmit={handleSubmit(onSubmit)} className="py-4">
             <div>
               <div>
-                <div className="grid  grid-cols-1 gap-7 w-full">
+                <div className="grid  grid-cols-1 gap-y-7 w-full">
                   <div className="flex flex-col md:flex-row gap-7 w-full">
                     <Input
                       placeholder="Full Name"
@@ -104,7 +130,6 @@ const ContactSection: React.FC = () => {
                       error={errors.email?.message}
                       fullWidth
                     />
-                 
                   </div>
 
                   <div className="col-span-2">
@@ -155,6 +180,58 @@ const ContactSection: React.FC = () => {
           </DynamicIslandProvider>
         </div>
       </div>
+      <AnimatePresence>
+        {showModal && (
+          <motion.div
+            key="modal"
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-black/40 flex justify-center items-center z-50"
+          >
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: 50, opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className={`bg-white dark:bg-neutral-900 rounded-2xl shadow-lg p-8 max-w-sm mx-auto text-center`}
+            >
+              {result === "success" ? (
+                <>
+                  <motion.h3
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    className="text-2xl font-semibold text-green-600 mb-2"
+                  >
+                    Message Sent!
+                  </motion.h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Thanks for reaching out. I’ll get back to you as soon as
+                    possible.
+                  </p>
+                </>
+              ) : (
+                <>
+                  <motion.h3
+                    initial={{ scale: 0.8 }}
+                    animate={{ scale: 1 }}
+                    className="text-2xl font-semibold text-red-600 mb-2"
+                  >
+                    Something went wrong 😢
+                  </motion.h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Please try again or reach me directly via email.
+                  </p>
+                </>
+              )}
+              <p className="text-xs mt-4 text-gray-400">
+                This message will close automatically in 10 seconds.
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react";
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, href: "#" },
-  { name: "LinkedIn", icon: Linkedin, href: "#" },
-  { name: "Twitter", icon: Twitter, href: "#" },
-  { name: "Email", icon: Mail, href: "mailto:hello@alexchen.dev" },
+  { name: "GitHub", icon: Github, href: "https://github.com/yetunde495" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com/in/yetunde-morenikeji" },
+  { name: "Twitter", icon: Twitter, href: "https://x.com/morenikeji_48" },
+  { name: "Email", icon: Mail, href: "mailto:morenikejiy48@gmail.com" },
 ];
 
 const footerLinks = [
@@ -16,7 +16,7 @@ const footerLinks = [
     title: "Work",
     links: [
       { name: "Projects", href: "#projects" },
-      { name: "Case Studies", href: "#case-studies" },
+      { name: "Why Choose Me?", href: "#value" },
       { name: "Process", href: "#process" },
     ],
   },
